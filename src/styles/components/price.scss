@@ -1,0 +1,38 @@
+.price {
+    &-table {
+        border-collapse: collapse;
+        &__name {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        &__value {
+            position: relative;
+            line-height: 1;
+            // &:before {
+            //     content: "";
+            //     display: block;
+            //     width: 200%;
+            //     aspect-ratio: 1 / 1;
+            //     background-image: url(../img/boobles.svg);
+            //     background-position: center;
+            //     background-size: contain;
+            //     background-repeat: no-repeat;
+            //     position: absolute;
+            //     left: 50%;
+            //     top: 50%;
+            //     transform: translate(-50%, -40%);
+            //     z-index: -1;;
+            // }
+        }
+        &__row {
+            &:not(:first-child) td {
+                padding-top: 1rem;
+            }
+            &:not(:last-child) td {
+                border-bottom: 1px solid var(--color-1-tint-2);
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}

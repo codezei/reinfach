@@ -1,0 +1,23 @@
+mixin priceItem(category)
+    .card.card-white.card-large.card-shadow.card-grid.card-grouped
+        .card__header.justify-content-center
+            svg.wave.wave-top.wave-accent
+                use(href="#wave-bottom")
+            h3.h5.card__title.text-white.mt-0= category.title
+                br
+                br
+        .card__body
+            table.price-table
+                each item in category.items
+                    tr.price-table__row
+                        td.w-100
+                            .price-table__name
+                                img(src=`img/${item.icon}`, alt="", width="100")
+                                p= item.name
+                        td
+                            .price-table__value.text-accent ab #[span.h3.text-bold= item.price]&nbsp;€
+        //- .card__footer
+        //-     svg.wave.wave-bottom
+        //-         use(href="#wave-top")
+        //-     br
+        //-     +btn(category.btnText)(class="btn-secondary btn-large magnet-btn")

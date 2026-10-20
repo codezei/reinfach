@@ -1,0 +1,270 @@
+/*!
+ * Bootstrap Grid v5.3.3 (https://getbootstrap.com/)
+ * Copyright 2011-2024 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+:root {
+    --container-width: 100%;
+}
+@media (min-width: 576px) {
+:root  {
+    --container-width: 540px;
+}
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+    :root {
+            --container-width: 720px;
+        }
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+    :root {
+            --container-width: 960px;
+        }
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+    :root {
+            --container-width: 1140px;
+        }
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+    :root {
+            --container-width: 1320px;
+        }
+  .container {
+    max-width: 1320px;
+  }
+}
+:root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+}
+
+.row {
+    --gap: var(--section-gap, 1rem);
+    --cols: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    margin: 0;
+    padding: 0;
+}
+
+.row-nowrap {
+    flex-wrap: nowrap;
+}
+
+ul.row {
+    list-style: none;
+}
+
+.gap-0 {
+    --section-gap: 0px;
+}
+
+.row-cols-1 {
+    --cols: 1;
+}
+
+.row-cols-2 {
+    --cols: 2;
+}
+
+.row-cols-3 {
+    --cols: 3;
+}
+
+.row-cols-4 {
+    --cols: 4;
+}
+
+.row-cols-5 {
+    --cols: 5;
+}
+
+.row-cols-6 {
+    --cols: 6;
+}
+
+
+@media screen and (min-width: 576px) {
+    .row-cols-sm-1 {
+        --cols: 1;
+    }
+
+    .row-cols-sm-2 {
+        --cols: 2;
+    }
+
+    .row-cols-sm-3 {
+        --cols: 3;
+    }
+
+    .row-cols-sm-4 {
+        --cols: 4;
+    }
+
+    .row-cols-sm-5 {
+        --cols: 5;
+    }
+
+    .row-cols-sm-6 {
+        --cols: 6;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .row-cols-md-1 {
+        --cols: 1;
+    }
+
+    .row-cols-md-2 {
+        --cols: 2;
+    }
+
+    .row-cols-md-3 {
+        --cols: 3;
+    }
+
+    .row-cols-md-4 {
+        --cols: 4;
+    }
+
+    .row-cols-md-5 {
+        --cols: 5;
+    }
+
+    .row-cols-md-6 {
+        --cols: 6;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .row-cols-lg-1 {
+        --cols: 1;
+    }
+
+    .row-cols-lg-2 {
+        --cols: 2;
+    }
+
+    .row-cols-lg-3 {
+        --cols: 3;
+    }
+
+    .row-cols-lg-4 {
+        --cols: 4;
+    }
+
+    .row-cols-lg-5 {
+        --cols: 5;
+    }
+
+    .row-cols-lg-6 {
+        --cols: 6;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .row-cols-xl-1 {
+        --cols: 1;
+    }
+
+    .row-cols-xl-2 {
+        --cols: 2;
+    }
+
+    .row-cols-xl-3 {
+        --cols: 3;
+    }
+
+    .row-cols-xl-4 {
+        --cols: 4;
+    }
+
+    .row-cols-xl-5 {
+        --cols: 5;
+    }
+
+    .row-cols-xl-6 {
+        --cols: 6;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .row-cols-xxl-1 {
+        --cols: 1;
+    }
+
+    .row-cols-xxl-2 {
+        --cols: 2;
+    }
+
+    .row-cols-xxl-3 {
+        --cols: 3;
+    }
+
+    .row-cols-xxl-4 {
+        --cols: 4;
+    }
+
+    .row-cols-xxl-5 {
+        --cols: 5;
+    }
+
+    .row-cols-xxl-6 {
+        --cols: 6;
+    }
+}
+
+
+.col {
+    width: calc(100% / var(--cols) - var(--gap) * (var(--cols) - 1) / var(--cols));
+    flex-shrink: 0;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.row-reverse {
+    flex-direction: row-reverse;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-start {
+    align-items: flex-start;
+}

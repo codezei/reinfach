@@ -1,0 +1,29 @@
+section.works#works.section.section-dark.section-shape(data-nav="works")
+    //- svg.section-wave__top()
+    //-     use(href="#wave-top")
+    //- svg.section-wave__bottom()
+    //-     use(href="#wave-bottom")
+    .container
+        .section__header
+            .section__header-col
+                .pre-title.section__header-pre-title Vorher-Nachher & Prozess
+                h2.title.section__header-title #[span.text-accent Echte Vorher-Nachher-Ergebnisse] unserer Tiefenreinigung
+            .section__header-col
+                p.subtitle.section__header-subtitle.h5 Vom tiefsitzenden Fleck bis zur hygienischen Frische: Sehen Sie im Video, wie wir Sofas, Matratzen, Teppiche und Autositze direkt bei unseren Kunden in Würzburg fasertief reinigen.
+        .section__body
+            .swiper.works-swiper
+                .swiper-wrapper
+                    each num in [1,2,3,4,5,6,7,8]
+                        .swiper-slide
+                            +videoItem(videoData[num])
+        .section__footer
+            .swiper-navigation
+                button.btn.btn-primary.btn-normal.btn-shadow.works-navigation-button-prev(type="button")
+                    span.btn-icon
+                        svg(width="16", height="16")
+                            use(href="#chevron-left")
+                .swiper-pagination.works-pagination.swiper-pagination-static.w-auto
+                button.btn.btn-primary.btn-normal.btn-shadow.works-navigation-button-next(type="button")
+                    span.btn-icon
+                        svg(width="16", height="16")
+                            use(href="#chevron-right")

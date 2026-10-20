@@ -1,0 +1,6 @@
+mixin btn(text)
+    a.btn(href=`https://wa.me/${phoneNumber.replace('+', '')}` target="_blank" rel="noopener noreferrer")&attributes(attributes)
+        span.btn-text=text
+        span.btn-icon
+            svg(width="24" height="24")
+                use(href="#whatsapp")

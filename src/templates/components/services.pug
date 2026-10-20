@@ -1,0 +1,61 @@
+section.services#services.section.section-white.section-wave(data-nav="services")
+    svg.section-wave__top()
+        use(href="#wave-top")
+    svg.section-wave__bottom()
+        use(href="#wave-bottom")
+    .container
+        .section__header
+            .section__header-col
+                .pre-title.section__header-pre-title Was wir reinigen
+                h2.title.section__header-title #[span.text-accent Unsere Leistungen] <br>im Überblick
+            .section__header-col
+                p.subtitle.h5.section__header-subtitle Fasertiefe Sauberkeit und Hygiene – <br>wir kommen mit Profi-Equipment direkt zu Ihnen nach Hause.
+        .row.row-cols-lg-3
+            .col
+                .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
+                    .card__img
+                        img(src="img/service-img-1.png" alt="")
+                        svg.wave.wave-bottom
+                            use(href="#wave-top")
+                        h3.h4.card__title.m-0 Polster- <br>& Sofareinigung
+                    .card__body
+                        p.card__text Wir entfernen tiefsitzenden Schmutz, hartnäckige Flecken und unangenehme Gerüche schonend aus allen Stoffarten. Ihre Lieblingsmöbel sehen wieder aus wie neu.
+                        ul.card__list.list-check.list
+                            li Sofas, Ecksofas, Sessel & Stühle
+                            li Entfernung von Kaffee-, Wein-, Fett- & Tierflecken
+                            li Farbauffrischung & Geruchsneutralisation
+                            li Schonend für die Fasern, schnelle Trocknung
+                    .card__footer
+                        +btn("Polster reinigen lassen")(class="btn-primary magnet-btn btn-normal")
+            .col
+                .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
+                    .card__img
+                        img(src="img/service-img-2.png" alt="")
+                        svg.wave.wave-bottom
+                            use(href="#wave-top")
+                        h3.h4.card__title.m-0 Matratzen- <br>& Topperreinigung
+                    .card__body
+                        p.card__text Für einen gesunden und erholsamen Schlaf. Wir befreien Ihre Matratzen fasertief von Hausstaubmilben, Bakterien, Schweiß und unschönen Flecken – ganz ohne aggressive Chemie.
+                        ul.card__list.list-check.list
+                            li Einzel-, Doppelmatratzen & Topper
+                            li Ideal für Allergiker (99% Milbenentfernung)
+                            li Umweltfreundliche & sichere Reinigungsmittel
+                            li Hygienische Frische ohne Chemiegeruch
+                    .card__footer
+                        +btn("Matratze reinigen lassen")(class="btn-primary magnet-btn btn-normal")
+            .col
+                .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
+                    .card__img
+                        img(src="img/service-img-3.png" alt="")
+                        svg.wave.wave-bottom
+                            use(href="#wave-top")
+                        h3.h4.card__title.m-0 Auto-<br>Innenreinigung
+                    .card__body
+                        p.card__text Sie das Neuwagen-Gefühl zurück. Wir reinigen Ihre Autositze und Teppiche gründlich von Alltagsflecken, Staub, Tierhaaren und Gerüchen direkt bei Ihnen vor Ort.
+                        ul.card__list.list-check.list
+                            li Vordersitze, Rücksitz, Fahrzeugboden & Kofferraum
+                            li Gegen Wasserflecken, Salzränder & Nikotingeruch
+                            li Ideal vor dem Verkauf oder der Leasingrückgabe
+                            li Bequem bei Ihnen vor Ort
+                    .card__footer
+                        +btn("Autositze reinigen lassen")(class="btn-primary magnet-btn btn-normal")

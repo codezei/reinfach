@@ -1,0 +1,17 @@
+mixin videoItem(video)
+    .video.js-video(data-video-src=video.src)&attributes(attributes)
+        .video__poster
+            picture
+                img(src=video.poster alt=video.alt width=video.width height=video.height loading="lazy")
+        .video__player-wrap
+        button.video__btn(type="button" aria-label="Odtwórz wideo")
+            svg.icon-play(viewbox="0 0 24 24" fill="currentColor" aria-hidden="true")
+                path(d="M8 5v14l11-7z")
+            svg.icon-pause(viewbox="0 0 24 24" fill="currentColor" aria-hidden="true")
+                path(d="M6 19h4V5H6v14zm8-14v14h4V5h-4z")
+        .video__info
+            if video.tags && video.tags.length
+                .video__tags
+                    each tag in video.tags
+                        span.video__tag= tag
+            h3.video__title= video.title

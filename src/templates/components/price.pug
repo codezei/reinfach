@@ -1,0 +1,18 @@
+section.price#price.section.section-secondary(data-nav="price")
+    //- svg.section-wave__top()
+    //-     use(href="#wave-top")
+    //- svg.section-wave__bottom()
+    //-     use(href="#wave-bottom")
+    .container.default-grid
+        .default-grid__header
+            .pre-title Transparente Preise
+            h2.title #[span.text-accent Faire Festpreise] ohne versteckte Kosten
+            p.subtitle Keine Überraschungen vor Ort: Alle Preise verstehen sich inklusive 0 € Anfahrt in Würzburg. Senden Sie uns einfach ein Foto per WhatsApp für Ihr verbindliches Festpreis-Angebot.
+        .default-grid__body
+            .price-block
+                each category in priceData
+                    +priceItem(category)
+        .default-grid__footer
+            div
+                +btn("Jetzt Polster reinigen lassen")(class="btn-primary btn-normal magnet-btn")
+                p.text-small * Warum „ab“-Preise? Der genaue Festpreis richtet sich nach Größe und Verschmutzungsgrad – und wird Ihnen nach einem kurzen Foto per WhatsApp vorab zu 100 % verbindlich garantiert.

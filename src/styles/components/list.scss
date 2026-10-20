@@ -1,0 +1,68 @@
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9em;
+
+    &-check {
+        li {
+            position: relative;
+            // padding-left: 24px;
+
+            // border-radius: 50rem 0 0 50rem;
+            display: flex;
+            gap: 0.5rem;
+            &:not(:last-child) {
+            padding-bottom: 0.5rem;
+                border-bottom: 1px solid var(--color-1-tint-2);
+            }
+
+            &::before {
+                content: '';
+                // position: absolute;
+                display: block;
+                left: 0;
+                top: 0.125lh;
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+                background-color: #fff;
+                background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%232772db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+                background-size: 1em;
+                background-position: center;
+                background-repeat: no-repeat;
+                box-shadow: 1px 2px 4px rgba($color: #000000, $alpha: 0.1);
+                flex-shrink: 0;
+
+            }
+        }
+    }
+
+    &-gift {
+        color: var(--text-success);
+
+        li {
+            position: relative;
+            padding-left: 24px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.125lh;
+                width: 1em;
+                height: 1em;
+                background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%2310b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>') no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+
+    &-row {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}

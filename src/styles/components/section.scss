@@ -1,0 +1,317 @@
+.section {
+    --padding-top: 30px;
+    --padding-bottom: 30px;
+    color: color-mix(in srgb, var(--section-text) 80%, transparent);
+    background: var(--section-bg);
+    position: relative;
+    z-index: 2;
+    // box-shadow: 0 calc(var(--padding-top) * -0.5) calc(var(--padding-top)) var(--section-bg);
+
+    display: flex;
+    align-items: center;
+
+    padding-top: calc(var(--padding-top-inherit, var(--padding-top)) + var(--padding-top-add, 0px));
+    padding-bottom: calc(var(--padding-bottom-inherit, var(--padding-bottom)) + var(--padding-bottom-add, 0px));
+
+
+    &[id] {
+        scroll-margin-top: var(--header-height);
+    }
+
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        @media screen and (min-width: 1220px) {
+            flex-wrap: nowrap;
+            align-items: center;
+            &-col {
+                width: 50%;
+
+            }
+        }
+        &-title {
+            --inherit-title-margin: 0px;
+        }
+        &-subtitle {
+            --inherit-subtitle-margin: 0px;
+            margin-top: 0;
+        }
+    }
+
+
+    &-primary {
+        --section-bg: var(--color-1-base);
+        --section-text: #fff;
+        --section-accent: var(--color-1-tint-2);
+    }
+
+    &-secondary {
+        --section-bg: #f2f5fc;
+        --section-text: var(--color-1-shade-3);
+        --section-accent: var(--color-1-base);
+    }
+
+    &-white {
+        --section-bg: #fff;
+        --section-text: var(--color-1-shade-3);
+        --section-accent: var(--color-1-base);
+    }
+
+    &-dark {
+        --section-bg: var(--color-1-shade-3);
+        --section-text: #fff;
+        --section-accent: var(--color-1-tint-1);
+    }
+
+
+
+
+    &-shape {
+        --offset: 1rem;
+        margin-left: var(--offset);
+        margin-right: var(--offset);
+        border-radius: 2rem;
+        .container {
+            width: calc(100% - 1.5rem);
+
+        }
+    }
+
+    &-full-height {
+        --full-height: 100vh;
+
+        @supports (height: 100svh) {
+            --full-height: 100svh;
+        }
+
+        min-height: var(--full-height);
+        // min-height: calc(var(--full-height) - var(--header-height));
+    }
+
+    &-sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+
+    &__body {
+        width: 100%;
+    }
+
+    &__footer {
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        // margin-top: 2rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        --padding-top: 60px;
+        --padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        --padding-top: 80px;
+        --padding-bottom: 80px;
+    }
+}
+
+.custom-container {
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        display: block;
+        height: 1200px;
+        // max-height: calc(100% + var(--padding-top) + var(--padding-bottom));
+        aspect-ratio: 1/1;
+        background: url(../img/boobles.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        position: absolute;
+        left: 0;
+        top: -50%;
+        transform: translate(-20%, calc(var(--padding-top) * -1));
+        z-index: -1;
+        opacity: 0.5;
+        // opacity: 0.1;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+.section-wave {
+    --wave-height: var(--padding-top);
+    --padding-top-add: calc(var(--padding-top) * -1);
+    --padding-bottom-add: calc(var(--padding-bottom) * -1);
+    z-index: 3;
+
+    &__top {
+        bottom: 100%;
+        filter: drop-shadow(0 -15px 0 color-mix(in srgb, var(--color-1-base) 5%, transparent));
+
+        @media screen and (min-width: 1200px) {
+            will-change: transform;
+            animation: waveMoveLeft 14s linear infinite;
+        }
+    }
+
+    &__bottom {
+        top: 100%;
+        filter: drop-shadow(0 15px 0 color-mix(in srgb, var(--color-1-base) 5%, transparent));
+
+        @media screen and (min-width: 1200px) {
+            will-change: transform;
+            animation: waveMoveRight 14s linear infinite;
+        }
+    }
+
+    &__top,
+    &__bottom {
+        width: 200%;
+        height: var(--wave-height);
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        pointer-events: none;
+        z-index: -1;
+
+    }
+
+        .section:has(+ &) {
+            --padding-bottom-add: var(--padding-bottom);
+        }
+
+    &+.section {
+        --padding-top-add: var(--padding-top);
+    }
+
+    // &::before {
+    //     content: "";
+
+
+
+
+    //     background-image: url(#wave-top);
+    //     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><g transform="scale(1, -1) translate(0, -120)"><path d="M0,40 C200,100 400,-20 600,40 C800,100 1000,-20 1200,40 L1200,0 L0,0 Z" fill="white"/></g></svg>');
+    //     background-size: 50% 100%;
+    //     background-repeat: repeat-x;
+
+
+
+    // }
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+
+    //     left: 0;
+    //     width: 200%;
+    //     height: var(--wave-height);
+    //     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><g transform="scale(1, -1) translate(0, -120)"><path d="M0,40 C200,100 400,-20 600,40 C800,100 1000,-20 1200,40 L1200,120 L0,120 Z" fill="white"/></g></svg>');
+    //     background-size: 50% 100%;
+    //     background-repeat: repeat-x;
+    //     z-index: 2;
+    //     pointer-events: none;
+
+    // }
+
+    // .custom-container {
+    //     position: relative;
+    //     z-index: 1;
+
+    //     &:before,
+    //     &:after {
+    //         content: "";
+    //         display: block;
+    //         width: 1200px;
+    //         height: 1200px;
+    //         position: absolute;
+    //         z-index: -1;
+    //         opacity: 0.7;
+    //     }
+
+    //     &:before {
+
+    //         background: radial-gradient(closest-side, var(--color-2-base) 0%, transparent 100%);
+    //         top: -300px;
+    //         left: -300px;
+    //         transform-origin: 400px 400px;
+    //         z-index: -1;
+
+    //         @media screen and (min-width: 1200px) {
+    //             animation: orbitClockwise 20s linear infinite;
+    //             will-change: transform;
+    //         }
+    //     }
+
+    //     &:after {
+    //         background: radial-gradient(closest-side, var(--color-1-base) 0%, transparent 100%);
+    //         bottom: -300px;
+    //         right: -300px;
+    //         transform-origin: 400px 400px;
+    //         z-index: -2;
+
+    //         @media screen and (min-width: 1200px) {
+    //             animation: orbitCounterClockwise 25s linear infinite;
+    //             will-change: transform;
+    //         }
+    //     }
+    // }
+}
+
+@keyframes waveMoveLeft {
+
+    /* Використовуємо translate3d для активації GPU на телефонах */
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes waveMoveRight {
+    0% {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@keyframes orbitClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitCounterClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}

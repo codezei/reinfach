@@ -1,0 +1,9 @@
+mixin reviewItem(item)
+    .card.card-grid.h-100(data-tilt)&attributes(attributes)
+        .card__body
+            p.card__text=item.text
+        .card__header
+            //- .card__number=`0${index + 1}`
+            .card__icon
+                .h6.text-bold.card__title.m-0=item.author
+            .rating(style="--star-rating: 5;")

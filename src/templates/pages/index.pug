@@ -1,0 +1,71 @@
+extends ../settings/layout
+
+prepend html
+    - const lang = "de";
+
+prepend head
+    - const pageTitle = "Polsterreinigung Würzburg vor Ort | Sofa, Matratze & Auto – ReinFach";
+    - const themeColor = "#3b63d9";
+    - const pageDescription = "Professionelle Polster-, Matratzen- & Auto-Innenreinigung in Würzburg und Umgebung. ✓ 0 € Anfahrt in Würzburg ✓ Faire Festpreise ✓ 5,0 ★ bei Google. Jetzt Foto per WhatsApp senden!";
+    - const pageKeywords = "Polsterreinigung Würzburg, Sofareinigung Würzburg, Matratzenreinigung Würzburg, Auto Innenreinigung Würzburg, Teppichreinigung vor Ort, Polstermöbel reinigen lassen, Fleckenentfernung Sofa, Milbenentfernung Matratze, Autositze reinigen Würzburg, ReinFach";
+    - const pageUrl = "https://reinfach.de/";
+    - const pageImage = "https://reinfach.de/img/og-image.jpg";
+    - const twitterImage = "https://reinfach.de/img/og-image.jpg";
+    - const phoneNumber = '+4915209655835';
+    - const telegramNick = '';
+    - const email = 'reinfach.service@gmail.com';
+    - const google = 'https://www.google.com/maps/place//@49.8169894,9.633954,17z/data=!3m1!4b1!4m3!3m2!1s0xa47e21315a994f81:0x3d2c936585698b85!12e1?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D';
+
+
+append head
+    //- include ../data/portfolioData
+    include ../data/faqData
+    include ../data/videoData
+    include ../data/reviewData
+    //- include ../data/reasonData
+    //- include ../data/explanationData
+    include ../data/howData
+    include ../data/priceData
+
+
+append content
+    svg.hidden-blob-svg(width="0" height="0")
+        defs
+            clipPath#blob-mask(clipPathUnits="objectBoundingBox")
+                path#blob-path(d="M0.5,0.075 C0.75,0.05 0.925,0.225 0.925,0.5 C0.925,0.725 0.775,0.925 0.5,0.95 C0.225,0.975 0.05,0.75 0.075,0.5 C0.1,0.25 0.225,0.1 0.5,0.075 Z")
+    .cursor-glow
+    //- include ../mixins/portfolioItem
+    include ../mixins/slider
+    include ../mixins/faqItem
+    include ../mixins/videoItem
+    include ../mixins/btn
+    include ../mixins/numericItem
+    include ../mixins/reviewItem
+    include ../mixins/priceItem
+    include ../components/header
+    main
+        include ../components/promo
+        include ../components/services
+        include ../components/price
+        include ../components/how
+        include ../components/works
+        include ../components/reviews
+        //- include ../components/advantages
+        //- include ../components/explanation
+        //- include ../components/reason
+        //- include ../components/format
+        //- include ../components/portfolio
+        //- include ../components/how
+        include ../components/faq
+        include ../components/contacts
+        include ../components/icons
+        //- include ../components/privacy
+    include ../components/footer
+append scripts
+    script(src="js/swiper-bundle.min.js")
+    script(src="js/fancybox.js", async)
+    script(src="js/vanilla-tilt.min.js", async)
+    script(src="js/gsap.min.js")
+    script(src="js/scroll-trigger.min.js")
+    script(src="js/beer-slider.js")
+    script(src="js/main.js")

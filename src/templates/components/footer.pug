@@ -1,0 +1,24 @@
+footer.footer.section.section-dark
+    .container
+        .row.row-cols-md-2.row-cols-lg-3
+            .col
+                .footer__logo
+                    include logo
+                .footer__socials
+                    h3.h6 Kontakt:
+                    include socials
+            .col
+                h3.h6 Navigation:
+                nav.menu.menu-column.align-items-start
+                    a.menu__item(href="#services"  data-link="services") Leistungen
+                    a.menu__item(href="#price"  data-link="price") Preise
+                    a.menu__item(href="#works"  data-link="works") Vorher / Nachher
+                    a.menu__item(href="#reviews"  data-link="reviews") Bewertungen
+                    a.menu__item(href="#contacts"  data-link="contacts") Kontakt
+            .col
+                h3.h6 Rechtliches:
+                nav.menu.menu-column.align-items-start
+                    a.menu__item(href="impressum.html", target="_blank") Impressum
+                    a.menu__item(href="datenschutz.html", target="_blank") Datenschutzerklärung
+                    a.menu__item(href="agb.html", target="_blank") AGB
+        p.text-center.text-small © #{new Date().getFullYear()} ReinFach. Alle Rechte vorbehalten.

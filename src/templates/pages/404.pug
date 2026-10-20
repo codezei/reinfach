@@ -1,0 +1,41 @@
+extends ../settings/layout
+
+prepend html
+    - const lang = "uk";
+
+prepend head
+    - const pageTitle = "404 — Сторінку не знайдено | yevdev";
+    - const themeColor = "#000000";
+    - const pageDescription = "Сторінку не знайдено. Поверніться на головну сторінку yevdev.";
+    - const pageUrl = "https://yevdev.dev/";
+    - const pageImage = "https://yevdev.dev/img/preview.webp";
+    - const twitterImage = "https://yevdev.dev/img/preview.webp";
+    - const phoneNumber = '+380756340024';
+    - const telegramNick = 'yevdevstudio';
+    - const email = 'yevdevstudio@gmail.com';
+
+append head
+    meta(name="robots" content="noindex, follow")
+
+append content
+    .page-not-found
+        .cursor-glow
+        include ../mixins/btn
+        header.header.section.section-dark.section-sticky
+            .header__inner
+                .header__logo
+                    picture
+                        source(srcset="img/logo.webp" type="image/webp")
+                        img(src="img/logo.png", alt="", width="110")
+                .header__socials
+                    include ../components/socials
+        main
+            section.promo#promo.section.section-dark.section-sticky
+                .section__inner
+                    .container
+                        .pre-title Помилка 404
+                        h1.title Сторінку не знайдено
+                        p.subtitle(style="margin-bottom: 2rem;") Схоже, ви перейшли за неправильним посиланням або сторінку було видалено.
+                        a.btn.btn-secondary.magnet-btn(href="/") На головну
+        include ../components/icons
+        //- include components/footer

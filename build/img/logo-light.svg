@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="830" viewBox="0 0 1280 830" role="img" aria-labelledby="title desc">
+  <title id="title">ReinFach</title>
+  <desc id="desc">Vector logo with droplet and R symbol, navy and blue wordmark, and two sparkle accents.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0752d5"/>
+      <stop offset="1" stop-color="#0757e8"/>
+    </linearGradient>
+    <linearGradient id="r-gradient" x1="0.42" y1="0.15" x2="0.78" y2="0.95">
+      <stop offset="0" stop-color="white"/>
+      <stop offset="0.42" stop-color="white"/>
+      <stop offset="0.58" stop-color="#0752d5"/>
+      <stop offset="1" stop-color="#0757e8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Droplet mark -->
+  <path fill="white" fill-rule="evenodd" d="
+    M 545 104
+    C 555 104 563 110 569 122
+    L 699 366
+    C 724 412 717 464 688 505
+    C 659 546 611 570 559 570
+    C 507 570 459 546 430 505
+    C 401 464 394 412 419 366
+    L 521 124
+    C 526 112 535 104 545 104 Z
+    M 545 188
+    L 453 389
+    C 436 426 443 462 466 489
+    C 489 516 522 531 559 531
+    C 596 531 629 516 652 489
+    C 675 462 682 426 663 389
+    L 545 188 Z"/>
+  <circle cx="559" cy="442" r="34" fill="white"/>
+
+  <!-- Stylized R with smooth gradient -->
+  <path fill="url(#r-gradient)" d="
+    M 617 106
+    L 748 106
+    C 829 106 883 151 883 224
+    C 883 278 853 317 806 337
+    L 909 525
+    C 916 538 911 551 898 557
+    C 885 563 872 557 865 545
+    L 718 282
+    L 753 282
+    C 800 282 830 260 830 225
+    C 830 188 801 157 751 157
+    L 644 157 Z"/>
+
+  <!-- Sparkles -->
+  <path fill="white" d="M 929 55 C 933 82 943 93 971 100 C 943 106 933 117 929 145 C 925 117 915 106 887 100 C 915 93 925 82 929 55 Z"/>
+  <path fill="white" d="M 992 151 C 996 173 1004 182 1028 188 C 1004 194 996 203 992 226 C 988 203 980 194 956 188 C 980 182 988 173 992 151 Z"/>
+
+  <!-- Centered wordmark, compact spacing -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="210" font-weight="700" letter-spacing="-2">
+    <text x="167" y="800" fill="white">Rein</text>
+    <text x="615" y="800" fill="url(#blue)">Fach</text>
+  </g>
+</svg>

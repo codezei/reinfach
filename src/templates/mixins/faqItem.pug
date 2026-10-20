@@ -1,0 +1,14 @@
+mixin faqItem(question, answer)
+    .card.card-white.js-toggle.card-normal.card-grouped.card-shadow(data-target="", data-collapse=".js-collapse")&attributes(attributes)
+        div
+            .card__header.justify-content-between.align-items-center
+                h3.h6.card__title.m-0= question
+                .card__btn.btn.btn-secondary.btn-small.magnet-btn
+                    span.btn-icon
+                        svg.icon.in-active-none(width="16" height="16")
+                            use(href="#plus")
+                        svg.icon.in-inactive-none(width="16" height="16")
+                            use(href="#minus")
+                    span.sr-only Перемкнути відповідь
+            .card__body.js-collapse.lh-0
+                p.card__text= answer

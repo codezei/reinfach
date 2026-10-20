@@ -1,0 +1,15 @@
+section.faq#faq.section.section-white.section-wave(data-nav="faq")
+    svg.section-wave__top()
+        use(href="#wave-top")
+    svg.section-wave__bottom()
+        use(href="#wave-bottom")
+    .container.default-grid
+        .default-grid__header
+            .pre-title Häufige Fragen
+            h2.title #[span.text-accent Haben Sie] noch Fragen?
+            p.subtitle Transparent und auf den Punkt gebracht: Hier erfahren Sie alles über den Ablauf vor Ort, die Trocknungszeiten und unsere Festpreisgarantie.
+        .default-grid__body
+            each faq, i in faqData
+                +faqItem(faq.question, faq.answer)
+        .default-grid__footer
+            +btn("Frage per WhatsApp stellen")(class="btn-primary btn-normal magnet-btn")

@@ -1,0 +1,164 @@
+.video {
+    position: relative;
+    width: 100%;
+
+    aspect-ratio: 9 / 16;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #050505;
+    cursor: pointer;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+    // margin-bottom: 30px;
+
+    position: relative;
+    overflow: hidden;
+    /* ... твої попередні стилі картки (aspect-ratio, border-radius тощо) ... */
+
+    /* Блок з інформацією */
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 20px 20px;
+        /* Великий верхній padding для плавного градієнта */
+
+        /* Темний градієнт для ідеального контрасту тексту */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+        z-index: 3;
+
+        /* Плавна анімація зникнення */
+        transition: transform 0.4s ease, opacity 0.4s ease;
+
+        /* Пропускаємо кліки крізь текст на саму картку відео */
+        pointer-events: none;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* Мітки у стилі преміум (напівпрозоре скло) */
+    &__tag {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(4px);
+        padding: 4px 10px;
+        border-radius: 4px;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.3;
+        min-height: 2lh;
+    }
+
+    /*
+          МАГІЯ АНІМАЦІЇ:
+          Коли відео отримує клас .is-playing (від JS),
+          текст плавно від'їжджає на 20px вниз і розчиняється.
+        */
+    &.is-playing {
+        .video__info {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+    }
+
+    &__poster {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        transition: opacity 0.4s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__player-wrap {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: var(--color-1-base);
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(4px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .icon-pause {
+            display: none;
+        }
+    }
+
+    &:hover:not(.is-playing) &__btn {
+        background-color: var(--color-1-base);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    &.is-loaded {
+        .video__poster {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &.is-playing {
+        .video__btn {
+            .icon-play {
+                display: none;
+            }
+
+            .icon-pause {
+                display: block;
+            }
+
+            opacity: 0.3;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+
+        &:hover .video__btn {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

@@ -1,0 +1,148 @@
+.promo {
+    --padding-top-add: var(--header-height);
+
+    &-grid {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            ". . . . . . . B B B B B"
+            "H H H H H H . B B B B B"
+            "F F F F F F . B B B B B"
+            ". . . . . . . B B B B B"
+        ;
+
+        &__header {
+            grid-area: H;
+        }
+
+        &__body {
+            grid-area: B;
+        }
+
+        &__footer {
+            grid-area: F;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        &-grid {
+            grid-template-areas:
+                "H H H H H H H H H H H H"
+                "B B B B B B B B B B B B"
+                "F F F F F F F F F F F F"
+            ;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+
+    // &__title {
+    //     max-width: 800px;
+    // }
+
+    &__subtitle {
+        // max-width: 550px;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    &__bullets {
+        margin-bottom: 2rem;
+        max-width: 600px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 1rem 2rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    &__blob {
+        position: relative;
+    }
+
+    &__slider {}
+
+}
+
+
+.scene {
+    position: relative;
+    display: inline-block;
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        transform-style: preserve-3d;
+        background: color-mix(in srgb, var(--color-1-tint-1) 50%, transparent);
+        transform: rotateX(84deg) translateY(-5%) translateX(-50%);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        border-radius: 50%;
+        width: 100%;
+        transform-origin: bottom center;
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 25px; // прямо під ніжками дивана
+        left: 50%;
+        transform: translateX(-50%);
+        width: 82%;
+        height: 18px;
+        background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.28) 0%, rgba(15, 23, 42, 0.08) 50%, transparent 75%);
+        filter: blur(6px);
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+
+
+
+
+
+.category {
+    // background: var(--color-1-tint-1);
+    // color: var(--color-1-shade-2);
+    // padding: 0.5rem;
+    // border-radius: 1rem;
+    // box-shadow: 2px 4px 8px rgba($color: #000000, $alpha: 0.1);
+    // text-align: center;
+    // font-size: 14px;
+    // height: 100%;
+
+    // border-radius: 50rem;
+    // background: #fff;
+
+    // &__icon {
+    //     height: 40px;
+    //     width: auto;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     display: block;
+    //     object-fit: contain;
+    //     object-position: center;
+
+    //     display: none;
+    // }
+
+    // &__text {
+    //     padding: 1rem;
+    //     text-align: center;
+    //     br {
+    //         display: none;
+    //     }
+    // }
+}

@@ -1,0 +1,16 @@
+nav.socials
+    a.socials__item.btn.btn-white.btn-normal.magnet-btn(href=`tel:${phoneNumber.replace('+', '')}` target="_blank" rel="noopener noreferrer" data-tilt)
+        span.sr-only Зв'язатись з telegram
+        span.btn-icon
+            svg(width="16" height="16")
+                use(href="#tel")
+    a.socials__item.btn.btn-white.btn-normal.magnet-btn(href=`https://wa.me/${phoneNumber.replace('+', '')}` target="_blank" rel="noopener noreferrer" data-tilt)
+        span.sr-only Зв'язатись з whatsapp
+        span.btn-icon
+            svg(width="16" height="16")
+                use(href="#whatsapp")
+    a.socials__item.btn.btn-white.btn-normal.magnet-btn(href=`mailto:${email}` target="_blank" rel="noopener noreferrer" data-tilt)
+        span.sr-only Зв'язатись з email
+        span.btn-icon
+            svg(width="16" height="16")
+                use(href="#email")

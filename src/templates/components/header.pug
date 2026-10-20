@@ -1,0 +1,32 @@
+header.header.section.section-dark
+    .header__inner
+        .header__logo
+            include logo
+        .header__menu#main-menu
+            nav.menu.menu-row
+                a.menu__item(href="#services" data-tilt data-link="services") Leistungen
+                a.menu__item(href="#price" data-tilt data-link="price") Preise
+                a.menu__item(href="#works" data-tilt data-link="works") Vorher / Nachher
+                a.menu__item(href="#reviews" data-tilt data-link="reviews") Bewertungen
+                a.menu__item(href="#contacts" data-tilt data-link="contacts") Kontakt
+            .header__menu-btn.text-center
+                include socials
+        .header__burger
+            button.js-burger.btn.btn-clear.btn-flush#burger(type="button" arial-label="Відкрити меню")
+                span.sr-only Відкрити меню
+                span.cross
+                    span
+                    span
+                    span
+        .header__widget.widget
+            .widget__header
+                include logo
+            .widget__body
+                nav.menu.menu-column.widget__menu
+                    a.menu__item(href="#services" data-tilt data-link="services") Leistungen
+                    a.menu__item(href="#price" data-tilt data-link="price") Preise
+                    a.menu__item(href="#works" data-tilt data-link="works") Vorher / Nachher
+                    a.menu__item(href="#reviews" data-tilt data-link="reviews") Bewertungen
+                    a.menu__item(href="#contacts" data-tilt data-link="contacts") Kontakt
+            .widget__footer
+                include socials

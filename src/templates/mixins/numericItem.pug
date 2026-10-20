@@ -1,0 +1,8 @@
+mixin numericItem(item, index)
+    .card(data-tilt)&attributes(attributes)
+        .card__header
+            .card__number=`0${index + 1}`
+            .h6.text-bold.card__title.m-0=item.title
+        .card__body
+            .card__section
+                p.card__text=item.text
