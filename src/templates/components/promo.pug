@@ -6,40 +6,34 @@ section.promo#promo.section.section-secondary.section-full-height(data-nav="prom
         .promo-grid
             .promo-grid__header
                 .row
-                    svg(viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24")
+                    svg(viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="48" height="48")
                         path(d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4")
                         path(d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853")
                         path(d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05")
                         path(d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335")
-                    span.rating(style="--star-rating: 5;")
-                    b.text-small 5.0 | 100% Weiterempfehlung
+                    div
+                        div.rating(style="--star-rating: 5;")
+                        div
+                            a.text-link.text-small(href=google target="_blank" rel="noopener noreferrer") 5,0 ★ Bewertungen auf Google Maps
                 h1.promo__title.title #[span.text-accent Professionelle Polsterreinigung] in Würzburg vor Ort
-                p.promo__subtitle.subtitle.h5 Fasertiefe Reinheit für Ihre Polstermöbel, Matratzen und Autositze. Genießen Sie wieder ein frisches und hygienisches Zuhause.
+                p.promo__subtitle.subtitle.subtitle-extractor-left.h5 Fasertiefe Reinheit für Ihr Sofa (Couch), Matratzen, Teppiche und Autositze direkt bei Ihnen zu Hause.
             .promo-grid__body
-                //- .promo__blob
-                //-     .blob
-                //-         svg.hidden-blob-svg(width="0" height="0")
-                //-             defs
-                //-                 clipPath#blob-mask(clipPathUnits="objectBoundingBox")
-                //-                     path#blob-path(d="M0.5,0.075 C0.75,0.05 0.925,0.225 0.925,0.5 C0.925,0.725 0.775,0.925 0.5,0.95 C0.225,0.975 0.05,0.75 0.075,0.5 C0.1,0.25 0.225,0.1 0.5,0.075 Z")
-                //-         .blob-bg
-                //-         .blob-bubble.blob-bubble--1
-                //-         .blob-bubble.blob-bubble--2
-                //-         .blob-bubble.blob-bubble--3
-                .swiper.categories-navigation-swiper
-                    .swiper-wrapper
-                        .swiper-slide.h-auto
-                            button.category.btn.btn-white.btn-shadow.btn-small.btn-border.w-100.text-center(type="button")
-                                //- img.category__icon(src="img/process/main-sofa-after.png", alt="", width="70")
-                                span.btn-text Sofas&nbsp;& Sessel
-                        .swiper-slide.h-auto
-                            button.category.btn.btn-white.btn-shadow.btn-small.btn-border.w-100.text-center(type="button")
-                                //- img.category__icon(src="img/process/mattress-2-after.png", alt="", width="70")
-                                span.btn-text Matratzen&nbsp;& Topper
-                        .swiper-slide.h-auto
-                            button.category.btn.btn-white.btn-shadow.btn-small.btn-border.w-100.text-center(type="button")
-                                //- img.category__icon(src="img/process/salon-2-after.png", alt="", width="70")
-                                span.btn-text Autositze&nbsp;& Innenräume
+
+                .categories
+                    .swiper.categories-navigation-swiper
+                        .swiper-wrapper
+                            .swiper-slide.h-auto
+                                button.category(type="button")
+                                    //- img.category__icon(src="img/process/main-sofa-after.png", alt="", width="70")
+                                    span.btn-text 1.&nbsp;Sofas&nbsp;& <br>Sessel
+                            .swiper-slide.h-auto
+                                button.category(type="button")
+                                    //- img.category__icon(src="img/process/mattress-2-after.png", alt="", width="70")
+                                    span.btn-text 2.&nbsp;Matratzen&nbsp;& <br>Topper
+                            .swiper-slide.h-auto
+                                button.category(type="button")
+                                    //- img.category__icon(src="img/process/salon-2-after.png", alt="", width="70")
+                                    span.btn-text 3.&nbsp;Autositze&nbsp;& <br>Innenräume
                 .swiper.categories-content-swiper.scene(data-disallow-touch="true")
                     .swiper-wrapper
                         .swiper-slide
@@ -48,21 +42,6 @@ section.promo#promo.section.section-secondary.section-full-height(data-nav="prom
                             +slider("mattress-2", "", "")(fetchpriority="high")
                         .swiper-slide
                             +slider("salon-2", "", "")(fetchpriority="high")
-
-                //- ul.promo__bullets.bullets
-                //-     li.bullet.bullets__item
-                //-         .bullet__icon
-                //-             img(src="img/service-furniture.png" alt="")
-                //-         .bullet__text Sofas & Sessel
-                //-     li.bullet.bullets__item
-                //-         .bullet__icon
-                //-             img(src="img/service-mattress.png" alt="")
-                //-         .bullet__text Matratzen & Topper
-                //-     li.bullet.bullets__item
-                //-         .bullet__icon
-                //-             img(src="img/service-salon.png" alt="")
-                //-         .bullet__text Autositze & Innenräume
             .promo-grid__footer
                 .promo__buttons
-                    +btn('Foto senden & Festpreis erhalten')(class="btn-primary btn-large magnet-btn")
-                    //- a.link(href="#price") Preise ansehen ↓
+                    +btn('Foto senden & Festpreis erhalten')(class="btn-primary btn-large w-100")

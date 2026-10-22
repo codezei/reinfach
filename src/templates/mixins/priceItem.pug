@@ -1,12 +1,7 @@
 mixin priceItem(category)
-    .card.card-white.card-large.card-shadow.card-grid.card-grouped
-        .card__header.justify-content-center
-            svg.wave.wave-top.wave-accent
-                use(href="#wave-bottom")
-            h3.h5.card__title.text-white.mt-0= category.title
-                br
-                br
-        .card__body
+    .price-item.col
+        h3.price-item__title= category.title
+        .price-item__table
             table.price-table
                 each item in category.items
                     tr.price-table__row
@@ -16,8 +11,10 @@ mixin priceItem(category)
                                 p= item.name
                         td
                             .price-table__value.text-accent ab #[span.h3.text-bold= item.price]&nbsp;€
+        .price-item__footer
+            +btn(category.btnText)(class="btn-primary btn-large magnet-btn w-100")
         //- .card__footer
         //-     svg.wave.wave-bottom
         //-         use(href="#wave-top")
         //-     br
-        //-     +btn(category.btnText)(class="btn-secondary btn-large magnet-btn")
+        //-

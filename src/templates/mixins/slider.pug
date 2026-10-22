@@ -1,12 +1,12 @@
 mixin slider(category, altBefore = "", altAfter = "")
     .beer-slider-wrapper
-        .beer-slider(id=`${category}-slider` data-beer-label="Nachher")
+        .beer-slider(id=`${category}-slider` data-beer-label="Nachher→")
             picture
                 //- source(type="image/webp" srcset=`img/${category}-after-mob.webp` media="(max-width: 430px)")
                 //- source(srcset=`img/${category}-after-mob.png` media="(max-width: 430px)")
                 //- source(type="image/webp" srcset=`img/${category}-after.webp`)
                 img(src=`img/process/${category}-after.png` alt=altAfter)&attributes(attributes)
-            .beer-reveal(data-beer-label="Vorher")
+            .beer-reveal(data-beer-label="←Vorher")
                 picture
                     //- source(type="image/webp" srcset=`img/${category}-before-mob.webp` media="(max-width: 430px)")
                     //- source(srcset=`img/${category}-before-mob.png` media="(max-width: 430px)")

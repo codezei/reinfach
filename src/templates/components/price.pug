@@ -1,18 +1,16 @@
 section.price#price.section.section-secondary(data-nav="price")
-    //- svg.section-wave__top()
-    //-     use(href="#wave-top")
-    //- svg.section-wave__bottom()
-    //-     use(href="#wave-bottom")
-    .container.default-grid
-        .default-grid__header
-            .pre-title Transparente Preise
-            h2.title #[span.text-accent Faire Festpreise] ohne versteckte Kosten
-            p.subtitle Keine Überraschungen vor Ort: Alle Preise verstehen sich inklusive 0 € Anfahrt in Würzburg. Senden Sie uns einfach ein Foto per WhatsApp für Ihr verbindliches Festpreis-Angebot.
-        .default-grid__body
-            .price-block
-                each category in priceData
-                    +priceItem(category)
-        .default-grid__footer
-            div
-                +btn("Jetzt Polster reinigen lassen")(class="btn-primary btn-normal magnet-btn")
-                p.text-small * Warum „ab“-Preise? Der genaue Festpreis richtet sich nach Größe und Verschmutzungsgrad – und wird Ihnen nach einem kurzen Foto per WhatsApp vorab zu 100 % verbindlich garantiert.
+    .container.custom-container
+        .section__header
+            .section__header-col
+                .pre-title.section__header-pre-title Transparente Preise
+                h2.title.section__header-title #[span.text-accent Faire Festpreise] für Ihre Polsterreinigung
+            .section__header-col
+                p.subtitle.subtitle-extractor-right.h5.section__header-subtitle Keine Überraschungen vor Ort: Alle Preise verstehen sich inklusive 0 € Anfahrt in Würzburg. Senden Sie uns einfach ein Foto per WhatsApp für Ihr verbindliches Festpreis-Angebot.
+        .section__body
+            .card.card-white.card-rounded.card-shadow.card-normal
+                .row.row-cols-xl-3
+                    each category in priceData
+                        +priceItem(category)
+        .section__footer
+            p.text-small * Alle Preise sind Endpreise inkl. 0 € Anfahrt in Würzburg. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.
+            p.text-small * Warum „ab“-Preise? Der genaue Festpreis richtet sich nach Größe und Verschmutzungsgrad – und wird Ihnen nach einem kurzen Foto per WhatsApp vorab zu 100 % verbindlich garantiert.

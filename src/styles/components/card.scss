@@ -1,20 +1,22 @@
 .card,
-.btn{
+.btn {
+    // Автоматичні тони тексту всередині картки/кнопки через color-mix
+    --title-color: color-mix(in srgb, var(--element-text) 65%, var(--color-1-base));
+    --text-color: color-mix(in srgb, var(--element-text) 68%, var(--element-bg));
+    --list-color: color-mix(in srgb, var(--element-text) 92%, var(--element-bg));
+    --divider-color: color-mix(in srgb, var(--element-text) 10%, var(--element-bg));
+
     overflow: hidden;
     background: var(--element-bg);
-    color: color-mix(in srgb, var(--element-text) 95%, transparent);
+    color: var(--text-color);
     position: relative;
     z-index: 1;
-
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 
-
-
     &-shadow {
-
         box-shadow:
-            2px 4px 12px color-mix(in srgb, var(--section-text) 20%, transparent),
-            inset 0 1px 0 color-mix(in srgb, var(--section-text) 10%, transparent);
+            2px 4px 12px color-mix(in srgb, var(--section-text, var(--color-1-shade-3)) 12%, transparent),
+            inset 0 1px 0 color-mix(in srgb, var(--section-text, var(--color-1-shade-3)) 8%, transparent);
 
         &:before {
             content: '';
@@ -25,14 +27,14 @@
             height: 1px;
             background: linear-gradient(90deg,
                     transparent,
-                    color-mix(in srgb, var(--element-text) 80%, transparent),
+                    color-mix(in srgb, var(--element-text) 35%, transparent),
                     transparent);
             transition: all 400ms;
         }
     }
 
     &-border {
-        border: 1px solid color-mix(in srgb, var(--element-text) 40%, transparent);
+        border: 1px solid color-mix(in srgb, var(--element-text) 14%, transparent);
     }
 
     &-rounded {
@@ -43,30 +45,38 @@
         border-radius: 50rem;
     }
 
-
-
+    // Кольорові модифікатори
     &-primary {
         --element-bg: var(--color-1-base);
-        --element-text: #fff;
+        --element-text: #ffffff;
+        --title-color: #ffffff;
+        --text-color: color-mix(in srgb, #ffffff 92%, var(--color-1-base));
     }
 
     &-secondary {
-        --element-bg: #f2f5fc;
+        --element-bg: var(--color-1-tint-3);
         --element-text: var(--color-1-shade-3);
     }
+
     &-white {
-        --element-bg: #fff;
-        --element-text: var(--color-1-shade-2);
+        --element-bg: #ffffff;
+        --element-text: var(--color-1-shade-3); // Замість shade-2 ставимо глибокий shade-3!
+
         .swiper-slide-thumb-active & {
             --element-bg: var(--color-1-shade-2);
-            --element-text: #fff;
+            --element-text: #ffffff;
+            --title-color: #ffffff;
         }
     }
+
     &-dark {
         --element-bg: var(--color-1-shade-3);
-        --element-text: #fff;
+        --element-text: #ffffff;
+        --title-color: #ffffff;
+        --text-color: color-mix(in srgb, #ffffff 80%, var(--color-1-shade-3));
     }
 
+    // Розміри
     &-large {
         --element-size: 1.25rem;
     }
@@ -78,25 +88,12 @@
     &-small {
         --element-size: 0.75rem;
     }
-
-
-    &:is(a, button, .js-toggle) {
-        @media screen and (min-width: 1024px) {
-            &:hover {
-                // transform: translateY(-4px);
-                // box-shadow:
-                //     0 25px 50px rgba(0, 0, 0, 0.5),
-                //     inset 0 1px 0 rgba(255, 255, 255, 0.4);
-            }
-        }
-
-    }
 }
-
 
 .card {
     overflow: hidden;
     padding: var(--element-size);
+    font-size: 16px;
 
     // &[class=hover] {
     //     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -187,7 +184,7 @@
     }
 
     &__badge {
-        background: color-mix(in srgb, var(--element-text) 20%, transparent);
+        background: color-mix(in srgb, var(--element-text) 10%, transparent);
         border-radius: 50rem;
         flex-grow: 1;
         text-align: center;
@@ -198,6 +195,7 @@
 
     &__title {
         color: var(--element-text, var(--section-text));
+
     }
 
     &__list,
@@ -262,12 +260,17 @@
     position: absolute;
     width: 1000px;
     min-width: 100%;
+    background-image: url(../img/boobles.svg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
 
     z-index: -1;
 
     &-top {
         top: 0;
         left: 0;
+        filter: drop-shadow(-50px 0 0 color-mix(in srgb, var(--wave-bg, var(--element-bg, var(--section-bg))) 30%, transparent));
     }
 
     &-bottom {

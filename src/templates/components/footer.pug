@@ -3,18 +3,39 @@ footer.footer.section.section-dark
         .row.row-cols-md-2.row-cols-lg-3
             .col
                 .footer__logo
-                    include logo
+                    .logo
+                        span.sr-only Rein Fach logo
+                        img(src="img/logo-light.svg" alt="" width="100")
+                .footer__info
+                    div ReinFach – Inh. Yurii Kovalskyi#[br]
+                    div Am Hermannsberg 43, 97837 Erlenbach#[br]
+                    div Tel. / WhatsApp: +49 152 09655835
                 .footer__socials
                     h3.h6 Kontakt:
-                    include socials
+                    nav.socials
+                        a.socials__item.btn.btn-primary.btn-normal.magnet-btn(href=`tel:${phoneNumber.replace('+', '')}` target="_blank" rel="noopener noreferrer" data-tilt)
+                            span.sr-only Зв'язатись з telegram
+                            span.btn-icon
+                                svg(width="16" height="16")
+                                    use(href="#tel")
+                        a.socials__item.btn.btn-primary.btn-normal.magnet-btn(href=`https://wa.me/${phoneNumber.replace('+', '')}` target="_blank" rel="noopener noreferrer" data-tilt)
+                            span.sr-only Зв'язатись з whatsapp
+                            span.btn-icon
+                                svg(width="16" height="16")
+                                    use(href="#whatsapp")
+                        a.socials__item.btn.btn-primary.btn-normal.magnet-btn(href=`mailto:${email}` target="_blank" rel="noopener noreferrer" data-tilt)
+                            span.sr-only Зв'язатись з email
+                            span.btn-icon
+                                svg(width="16" height="16")
+                                    use(href="#email")
             .col
                 h3.h6 Navigation:
                 nav.menu.menu-column.align-items-start
-                    a.menu__item(href="#services"  data-link="services") Leistungen
-                    a.menu__item(href="#price"  data-link="price") Preise
-                    a.menu__item(href="#works"  data-link="works") Vorher / Nachher
-                    a.menu__item(href="#reviews"  data-link="reviews") Bewertungen
-                    a.menu__item(href="#contacts"  data-link="contacts") Kontakt
+                    a.menu__item(href="#services") Leistungen
+                    a.menu__item(href="#price") Preise
+                    a.menu__item(href="#works") Vorher / Nachher
+                    a.menu__item(href="#reviews") Bewertungen
+                    a.menu__item(href="#contacts") Kontakt
             .col
                 h3.h6 Rechtliches:
                 nav.menu.menu-column.align-items-start

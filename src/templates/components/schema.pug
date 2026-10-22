@@ -1,129 +1,93 @@
-    //- -
-    //-     const schemaGraph = {
-    //-         "@context": "https://schema.org",
-    //-         "@graph": [
-    //-             {
-    //-                 "@type": "ProfessionalService",
-    //-                 "@id": `${pageUrl}/#organization`,
-    //-                 "name": "yevdev",
-    //-                 "url": pageUrl,
-    //-                 "logo": pageImage,
-    //-                 "image": pageImage,
-    //-                 "description": pageDescription,
-    //-                 "telephone": phoneNumber,
-    //-                 "email": email,
-    //-                 "priceRange": "$200 - $600",
-    //-                 "areaServed": ["UA", "PL", "EU"],
-    //-                 "sameAs": [
-    //-                     `https://t.me/${telegramNick}`,
-    //-                     `https://wa.me/${phoneNumber.replace('+', '')}`
-    //-                 ],
-    //-                 "contactPoint": {
-    //-                     "@type": "ContactPoint",
-    //-                     "telephone": phoneNumber,
-    //-                     "email": email,
-    //-                     "contactType": "customer service",
-    //-                     "availableLanguage": ["Ukrainian", "Polish", "Russian"]
-    //-                 },
-    //-                 "hasOfferCatalog": {
-    //-                     "@type": "OfferCatalog",
-    //-                     "name": "Послуги з розробки сайтів",
-    //-                     "itemListElement": [
-    //-                         {
-    //-                             "@type": "Offer",
-    //-                             "name": "Сайт-візитівка",
-    //-                             "description": "1 сторінка, адаптивний дизайн, оптимізований та чистий код, термін до 7 днів + SEO оптимізація у подарунок (від 200$ без адмінки, від 400$ на CMS WordPress).",
-    //-                             "price": "200",
-    //-                             "priceCurrency": "USD",
-    //-                             "priceSpecification": {
-    //-                                 "@type": "PriceSpecification",
-    //-                                 "minPrice": "200",
-    //-                                 "maxPrice": "400",
-    //-                                 "priceCurrency": "USD"
-    //-                             }
-    //-                         },
-    //-                         {
-    //-                             "@type": "Offer",
-    //-                             "name": "Лендінг під ключ",
-    //-                             "description": "1 сторінка, адаптивний дизайн, оптимізований та чистий код, термін 7–14 днів + SEO оптимізація у подарунок (250$ без адмінки, від 400$ на CMS WordPress).",
-    //-                             "price": "250",
-    //-                             "priceCurrency": "USD",
-    //-                             "priceSpecification": {
-    //-                                 "@type": "PriceSpecification",
-    //-                                 "minPrice": "250",
-    //-                                 "maxPrice": "400",
-    //-                                 "priceCurrency": "USD"
-    //-                             }
-    //-                         },
-    //-                         {
-    //-                             "@type": "Offer",
-    //-                             "name": "SEO Лендінг (багатосторінковий сайт)",
-    //-                             "description": "До 5 сторінок, адаптивний дизайн, оптимізований та чистий код, термін 7–14 днів + SEO оптимізація у подарунок (від 400$ без адмінки, від 600$ на CMS WordPress).",
-    //-                             "price": "400",
-    //-                             "priceCurrency": "USD",
-    //-                             "priceSpecification": {
-    //-                                 "@type": "PriceSpecification",
-    //-                                 "minPrice": "400",
-    //-                                 "maxPrice": "600",
-    //-                                 "priceCurrency": "USD"
-    //-                             }
-    //-                         }
-    //-                     ]
-    //-                 }
-    //-             },
-    //-             {
-    //-                 "@type": "WebSite",
-    //-                 "@id": `${pageUrl}/#website`,
-    //-                 "url": pageUrl,
-    //-                 "name": "yevdev",
-    //-                 "description": pageDescription,
-    //-                 "inLanguage": "uk",
-    //-                 "publisher": {
-    //-                     "@id": `${pageUrl}/#organization`
-    //-                 }
-    //-             },
-    //-             {
-    //-                 "@type": "WebPage",
-    //-                 "@id": `${pageUrl}/#webpage`,
-    //-                 "url": pageUrl,
-    //-                 "name": pageTitle,
-    //-                 "description": pageDescription,
-    //-                 "inLanguage": "uk",
-    //-                 "isPartOf": {
-    //-                     "@id": `${pageUrl}/#website`
-    //-                 },
-    //-                 "about": {
-    //-                     "@id": `${pageUrl}/#organization`
-    //-                 }
-    //-             },
-    //-             {
-    //-                 "@type": "ItemList",
-    //-                 "@id": `${pageUrl}/#portfolio`,
-    //-                 "name": "Портфоліо розроблених сайтів yevdev",
-    //-                 "itemListElement": portfolioData.map((item, index) => ({
-    //-                     "@type": "ListItem",
-    //-                     "position": index + 1,
-    //-                     "item": {
-    //-                         "@type": "CreativeWork",
-    //-                         "name": `${item.name} — ${item.type} (${item.category})`,
-    //-                         "url": item.link,
-    //-                         "description": item.description
-    //-                     }
-    //-                 }))
-    //-             },
-    //-             {
-    //-                 "@type": "FAQPage",
-    //-                 "@id": `${pageUrl}/#faq`,
-    //-                 "mainEntity": faqData.map(item => ({
-    //-                     "@type": "Question",
-    //-                     "name": item.question,
-    //-                     "acceptedAnswer": {
-    //-                         "@type": "Answer",
-    //-                         "text": item.answer
-    //-                     }
-    //-                 }))
-    //-             }
-    //-         ]
-    //-     };
-
-    //- script(type="application/ld+json")!= JSON.stringify(schemaGraph)
+script(type="application/ld+json").
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://reinfach.de/#business",
+                "name": "ReinFach – Polster-, Matratzen- & Auto-Innenreinigung Würzburg",
+                "image": "https://reinfach.de/img/og-image.jpg",
+                "telephone": "+4915209655835",
+                "email": "reinfach.service@gmail.com",
+                "url": "https://reinfach.de/",
+                "priceRange": "10€ - 140€",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Am Hermannsberg 43",
+                    "addressLocality": "Erlenbach",
+                    "postalCode": "97837",
+                    "addressCountry": "DE"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 49.7913,
+                    "longitude": 9.9534
+                },
+                "areaServed": [
+                    { "@type": "City", "name": "Würzburg" },
+                    { "@type": "City", "name": "Höchberg" },
+                    { "@type": "City", "name": "Veitshöchheim" },
+                    { "@type": "City", "name": "Gerbrunn" },
+                    { "@type": "City", "name": "Rottendorf" },
+                    { "@type": "City", "name": "Estenfeld" },
+                    { "@type": "City", "name": "Randersacker" },
+                    { "@type": "City", "name": "Waldbüttelbrunn" },
+                    { "@type": "City", "name": "Rimpar" },
+                    { "@type": "City", "name": "Ochsenfurt" },
+                    { "@type": "City", "name": "Kitzingen" },
+                    { "@type": "City", "name": "Karlstadt" },
+                    { "@type": "City", "name": "Marktheidenfeld" },
+                    { "@type": "City", "name": "Erlenbach" }
+                ],
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "08:00",
+                        "closes": "20:00"
+                    },
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": "Saturday",
+                        "opens": "09:00",
+                        "closes": "18:00"
+                    }
+                ],
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5.0",
+                    "bestRating": "5",
+                    "ratingCount": "14"
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Was kostet eine Polsterreinigung in Würzburg und gibt es Anfahrtskosten?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Die Preise beginnen ab 10 € für Stühle, ab 70 € für Zweisitzer-Sofas und ab 100 € für Ecksofas. Innerhalb des gesamten Stadtgebiets Würzburg ist die Anfahrt zu 100 % kostenlos (0 € Anfahrt)."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Wie lange dauert es, bis das Sofa oder die Matratze wieder trocken ist?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Dank moderner Sprühextraktions-Technik bleibt nur eine minimale Restfeuchte im Gewebe. Je nach Raumtemperatur und Belüftung sind Polster und Matratzen nach ca. 4 bis 8 Stunden wieder vollständig trocken."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Können Sie auch hartnäckige Flecken wie Katzenurin, Rotwein oder Kaffeeflecken entfernen?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Ja, wir entfernen gezielt hartnäckige Flecken sowie unangenehme Gerüche wie Tierurin, Schweiß, Nikotin, Kaffee und Rotwein fasertief aus dem Polster."
+                        }
+                    }
+                ]
+            }
+        ]
+    }

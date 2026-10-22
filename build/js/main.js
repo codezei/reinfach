@@ -473,7 +473,7 @@
     });
     categoriesContent.map(function (categoriesContentSwiper, categoriesContentSwiperIndex) {
       var swiper = new Swiper(categoriesContentSwiper, {
-        spaceBetween: 40,
+        spaceBetween: 0,
         allowTouchMove: categoriesContentSwiper.dataset.disallowTouch ? false : true,
         slideToClickedSlide: true,
         watchSlidesProgress: true,

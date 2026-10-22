@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     categoriesContent.map((categoriesContentSwiper, categoriesContentSwiperIndex) => {
         let swiper = new Swiper(categoriesContentSwiper, {
-            spaceBetween: 40,
+            spaceBetween: 0,
             allowTouchMove: categoriesContentSwiper.dataset.disallowTouch ? false : true,
             slideToClickedSlide: true,
             watchSlidesProgress: true,

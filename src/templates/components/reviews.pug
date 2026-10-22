@@ -1,35 +1,37 @@
 section#reviews.reviews.section.section-secondary(data-nav="reviews")
-    .container
+    .container.custom-container
         .section__header
             .section__header-col
                 .pre-title.section__header-pre-title Kundenstimmen & Feedback
                 h2.title.section__header-title #[span.text-accent Echte Erfahrungen] aus Würzburg & Umgebung
             .section__header-col
-                p.subtitle.h5.section__header-subtitle Überzeugen Sie sich von unserer Arbeitsqualität: Das berichten Privat- und Geschäftskunden über unsere mobile Polster-, Matratzen- und Auto-Innenreinigung direkt vor Ort.
-        .card.card-white.card-normal.card-rounded.card-shadow.card-grid
-            .swiper.reviews-swiper
-                .swiper-wrapper
-                    .swiper-slide.h-auto
-                        .card.card-grid.h-100
-                            .card__header
-                                svg(width="48", height="48")
-                                    use(href="#google")
-                                .card__rating.rating(style="--star-rating: 5;")
-                            .card__body
-                                p.card__text 5,0 von 5 Sternen5,0 von 5 Sternen · 100 % Weiterempfehlung
-                                a.card__link(href= google, target="_blank") Alle Rezensionen auf Google ansehen →
-                            .card__footer
-                                +btn("Matratze reinigen lassen")(class="btn-primary magnet-btn btn-normal")
-                    each review in reviewData
+                p.subtitle.subtitle-extractor-right.h5.section__header-subtitle Überzeugen Sie sich von unserer Arbeitsqualität: Das berichten Privat- und Geschäftskunden über unsere mobile Polster-, Matratzen- und Auto-Innenreinigung direkt vor Ort.
+        .section__body
+            .card.card-white.card-normal.card-rounded.card-shadow.card-grid
+                .swiper.reviews-swiper
+                    .swiper-wrapper
                         .swiper-slide.h-auto
-                            +reviewItem(review)
-        .swiper-navigation
-            button.btn.btn-secondary.btn-normal.btn-shadow.reviews-navigation-button-prev(type="button")
-                span.btn-icon
-                    svg(width="16", height="16")
-                        use(href="#chevron-left")
-            .swiper-pagination.reviews-pagination.swiper-pagination-static.w-auto
-            button.btn.btn-secondary.btn-normal.btn-shadow.reviews-navigation-button-next(type="button")
-                span.btn-icon
-                    svg(width="16", height="16")
-                        use(href="#chevron-right")
+                            .card.card-grid.h-100
+                                .card__header
+                                    svg(width="48", height="48")
+                                        use(href="#google")
+                                    .card__rating.rating(style="--star-rating: 5;")
+                                .card__body
+                                    p.card__text 5,0 von 5 Sternen · 100 % Weiterempfehlung
+                                    a.card__link.text-link(href=google target="_blank" rel="noopener noreferrer") Alle Rezensionen auf Google ansehen →
+                                .card__footer
+                                    +btn("Foto senden & Preis erhalten")(class="btn-primary magnet-btn btn-normal")
+                        each review in reviewData
+                            .swiper-slide.h-auto
+                                +reviewItem(review)
+        .section__footer
+            .swiper-navigation
+                button.btn.btn-secondary.btn-normal.btn-shadow.reviews-navigation-button-prev(type="button")
+                    span.btn-icon
+                        svg(width="16", height="16")
+                            use(href="#chevron-left")
+                .swiper-pagination.reviews-pagination.swiper-pagination-static.w-auto
+                button.btn.btn-secondary.btn-normal.btn-shadow.reviews-navigation-button-next(type="button")
+                    span.btn-icon
+                        svg(width="16", height="16")
+                            use(href="#chevron-right")

@@ -1,11 +1,11 @@
 section#contacts.contacts.section.section-secondary(data-nav="contacts")
-    .container
+    .container.custom-container
         .section__header
             .section__header-col
                 .pre-title.section__header-pre-title Kontakt & Einsatzgebiet
                 h2.title.section__header-title #[span.text-accent Jetzt Termin anfragen] in Würzburg & Umgebung
             .section__header-col
-                p.subtitle.h5.section__header-subtitle Senden Sie uns einfach ein kurzes Foto Ihrer Polster per WhatsApp oder rufen Sie uns an. Wir sind in ganz Würzburg (0 € Anfahrt) und im Umkreis von bis zu 30 km schnell für Sie vor Ort.
+                p.subtitle.subtitle-extractor-right.h5.section__header-subtitle Senden Sie uns einfach ein kurzes Foto Ihrer Polster per WhatsApp oder rufen Sie uns an. Wir sind in ganz Würzburg (0 € Anfahrt) und im Umkreis von bis zu 30 km schnell für Sie vor Ort.
         .card.card-white.card-rounded.card-shadow.card-grid.card-normal
             .row.row-cols-xl-3
                 .col
@@ -18,11 +18,13 @@ section#contacts.contacts.section.section-secondary(data-nav="contacts")
                             p.card__text Für ein schnelles Festpreis-Angebot senden Sie uns am besten 1–2 Fotos direkt per WhatsApp oder rufen Sie uns kurz an.
                             ul.card__list.list-check.list
                                 li
-                                    div #[strong Telefon:] #[a(href="+49 152 09655835") +49 152 09655835]
+                                    div #[strong Telefon:] #[a.text-link(href="+49 152 09655835") +49 152 09655835]
                                 li
-                                    div #[strong WhatsApp:] #[a(href="") Foto senden & Festpreis erhalten]
+                                    div #[strong WhatsApp:] #[a.text-link(href="") Foto senden & Festpreis erhalten]
                                 li
-                                    div #[strong E-Mail:] #[a(href="") reinfach.service@gmail.com]
+                                    div #[strong E-Mail:] #[a.text-link(href="") reinfach.service@gmail.com]
+                                li
+                                    div #[strong Standort & Service:] Rein mobiler Service direkt bei Ihnen vor Ort (kein Ladengeschäft)
                 .col
                     .card.card-grid
 
@@ -47,19 +49,10 @@ section#contacts.contacts.section.section-secondary(data-nav="contacts")
                         .card__header
                             h3.h6.card__title Würzburg & Umkreis (30 km)
                         .card__body
-                            .card__badge 🗓️ 0 € Anfahrt in Würzburg
+                            .card__badge 🚐 0 € Anfahrt in Würzburg
                             p.card__text Unser mobiler Reinigungsservice kommt mit Profi-Equipment direkt zu Ihnen nach Hause oder ins Gewerbe:
                             ul.card__list.list-check.list
                                 li
                                     div #[strong Stadt Würzburg (0 € Anfahrt):] Altstadt, Sanderau, Frauenland, Zellerau, Grombühl, Heidingsfeld, Lengfeld, Heuchelhof, Versbach, Rottenbauer
                                 li
-                                    div #[strong Landkreis & Umgebung:] Höchberg, Veitshöchheim, Gerbrunn, Rottendorf, Estenfeld, Randersacker, Waldbüttelbrunn, Rimpar, Ochsenfurt, Kitzingen, Karlstadt
-        iframe.contacts__map(
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.355174097767!2d9.633954!3d49.8169894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa47e21315a994f81%3A0x3d2c936585698b85!2s!5e0!3m2!1suk!2sua!4v1792524390136!5m2!1suk!2sua"
-            width="600"
-            height="450"
-            style="border: 0;"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            )
+                                    div #[strong Landkreis & Umgebung:] Höchberg, Veitshöchheim, Gerbrunn, Rottendorf, Estenfeld, Randersacker, Waldbüttelbrunn, Rimpar, Ochsenfurt, Kitzingen, Karlstadt, Marktheidenfeld, Erlenbach

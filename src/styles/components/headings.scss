@@ -1,5 +1,5 @@
 h1,
-h2 {
+h2,h3 {
     line-height: 1.2;
 }
 
@@ -42,6 +42,7 @@ h6 {
     font-family: "Unbounded", sans-serif;
     font-weight: 700;
     margin-top: 0;
+    text-wrap: balance;
     // hyphens: auto;
     // overflow-wrap: break-word;
 }
@@ -83,6 +84,53 @@ h6 {
 
 .subtitle {
     margin-bottom: var(--inherit-subtitle-margin, 2rem);
-    max-width: 65ch;
+    // max-width: 65ch;
     color: color-mix(in srgb, var(--section-text) 60%, transparent);
+    line-height: 1.4;
+    text-wrap: balance;
+    position: relative;
+    display: inline-block;
+
+    // background: color-mix(in srgb, currentColor 10%, transparent);
+    // border-radius: 0.5rem;
+    // padding: 0.5rem 1rem;
+
+
+    @media screen and (min-width: 576px) {
+        // &-extractor-left {
+        //     &:before {
+        //         content: "";
+        //         display: block;
+        //         height: 2lh;
+        //         aspect-ratio: 3 / 1;
+        //         background-image: url(../img/extractor-2.png);
+        //         background-size: contain;
+        //         background-repeat: no-repeat;
+        //         background-position: right center;
+        //         position: absolute;
+        //         right: calc(100% - 0.5rem);
+        //         top: 0.5rem;
+        //     }
+        // }
+
+        &-extractor-right {
+            padding-right: 2rem;
+            &:after {
+                content: "";
+                display: block;
+                height: 2lh;
+                aspect-ratio: 3 / 1;
+                background-image: url(../img/extractor-2.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: right center;
+                position: absolute;
+                left: calc(100% - 0.5rem);
+                top: 0;
+                transform: scale(-1, 1);
+            }
+        }
+    }
+
+
 }

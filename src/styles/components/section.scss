@@ -6,7 +6,9 @@
     position: relative;
     z-index: 2;
     // box-shadow: 0 calc(var(--padding-top) * -0.5) calc(var(--padding-top)) var(--section-bg);
-
+    &:has(.custom-container) {
+        z-index: 1;
+    }
     display: flex;
     align-items: center;
 
@@ -23,9 +25,13 @@
         flex-wrap: wrap;
         gap: 1rem;
         margin-bottom: 2rem;
+        &-col {
+            width: 100%;
+        }
         @media screen and (min-width: 1220px) {
             flex-wrap: nowrap;
             align-items: center;
+
             &-col {
                 width: 50%;
 
@@ -60,9 +66,22 @@
     }
 
     &-dark {
-        --section-bg: var(--color-1-shade-3);
+        --section-bg:
+            radial-gradient(circle at 18% 15%,
+                color-mix(in srgb, var(--color-1-base) 22%, transparent) 0%,
+                transparent 55%),
+
+            radial-gradient(circle at 85% 88%,
+                color-mix(in srgb, var(--color-1-shade-1) 55%, transparent) 0%,
+                transparent 60%),
+
+            linear-gradient(135deg,
+                var(--color-1-shade-3) 0%,
+                color-mix(in srgb, var(--color-1-shade-3) 78%, var(--color-1-shade-2)) 50%,
+                var(--color-1-shade-3) 100%);
         --section-text: #fff;
         --section-accent: var(--color-1-tint-1);
+
     }
 
 
@@ -102,6 +121,7 @@
     }
 
     &__footer {
+        margin-top: 2rem;
         // display: flex;
         // align-items: center;
         // justify-content: space-between;
@@ -133,6 +153,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: left center;
+        background-repeat: no-repeat;
         position: absolute;
         left: 0;
         top: -50%;
@@ -145,7 +166,20 @@
 
 }
 
-
+.brand-container {
+    position: relative;
+    &:before {
+        content: "Rein Fach";
+        position: absolute;
+        bottom: calc(var(--padding-bottom) * -1.1);
+        left: 5%;
+        font-size: calc(var(--padding-bottom) * 1.5);
+        color: color-mix(in srgb, currentColor 10%, transparent);
+        font-weight: 900;
+        // font-family: 'Unbounded';
+        line-height: 1;
+    }
+}
 
 
 
