@@ -96,6 +96,10 @@
             width: calc(100% - 1.5rem);
 
         }
+
+        @media screen and (max-width: 575px) {
+            --offset: 0.5rem;
+        }
     }
 
     &-full-height {
@@ -167,17 +171,20 @@
 }
 
 .brand-container {
-    position: relative;
-    &:before {
-        content: "Rein Fach";
-        position: absolute;
-        bottom: calc(var(--padding-bottom) * -1.1);
-        left: 5%;
-        font-size: calc(var(--padding-bottom) * 1.5);
-        color: color-mix(in srgb, currentColor 10%, transparent);
-        font-weight: 900;
-        // font-family: 'Unbounded';
-        line-height: 1;
+    @media screen and (min-width: 576px) {
+            position: relative;
+
+                &:before {
+                    content: "Rein Fach";
+                    position: absolute;
+                    bottom: calc(var(--padding-bottom) * -1.1);
+                    left: 5%;
+                    font-size: calc(var(--padding-bottom) * 1.5);
+                    color: color-mix(in srgb, currentColor 10%, transparent);
+                    font-weight: 900;
+                    // font-family: 'Unbounded';
+                    line-height: 1;
+                }
     }
 }
 

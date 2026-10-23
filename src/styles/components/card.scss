@@ -50,7 +50,7 @@
         --element-bg: var(--color-1-base);
         --element-text: #ffffff;
         --title-color: #ffffff;
-        --text-color: color-mix(in srgb, #ffffff 92%, var(--color-1-base));
+        --text-color: color-mix(in srgb, #ffffff 100%, var(--color-1-base));
     }
 
     &-secondary {
