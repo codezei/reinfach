@@ -243,6 +243,7 @@ ul.row {
 .col {
     width: calc(100% / var(--cols) - var(--gap) * (var(--cols) - 1) / var(--cols));
     flex-shrink: 0;
+    flex-grow: 1;
 }
 .justify-content-between {
     justify-content: space-between;
@@ -258,4 +259,10 @@ ul.row {
 }
 .align-items-start {
     align-items: flex-start;
+}
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+.flex-grow-1 {
+    flex-grow: 1;
 }

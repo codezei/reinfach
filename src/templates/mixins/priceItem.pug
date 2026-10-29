@@ -1,6 +1,6 @@
 mixin priceItem(category)
     .price-item.col
-        h3.price-item__title= category.title
+        h3.h4.price-item__title= category.title
         .price-item__table
             table.price-table
                 each item in category.items
@@ -12,7 +12,12 @@ mixin priceItem(category)
                         td
                             .price-table__value.text-accent ab #[span.h3.text-bold= item.price]&nbsp;€
         .price-item__footer
-            +btn(category.btnText)(class="btn-primary btn-large magnet-btn w-100")
+            .btn-row
+                +btn(category.btnText)(class="btn-primary btn-normal magnet-btn flex-grow-1")
+                a.btn.btn-normal.btn-white.magnet-btn.flex-shrink-0(href=`tel:${phoneNumber}`)
+                    span.btn-icon
+                        svg(width="24" height="24")
+                            use(href="#tel")
         //- .card__footer
         //-     svg.wave.wave-bottom
         //-         use(href="#wave-top")

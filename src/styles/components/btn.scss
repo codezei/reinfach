@@ -7,21 +7,30 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: calc(var(--element-size) * 3);
+    height: calc(var(--element-size) * 3.5);
     padding: 0;
     border: none;
-    line-height: 1.2;
+    line-height: 1.1;
     letter-spacing: 1px;
 
     &:is(button, a) {
         cursor: pointer;
     }
 
+    & > * {
+        pointer-events: none;
+    }
+
+    &-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
     &-text {
         display: inline-block;
         margin-left: var(--element-size);
         margin-right: var(--element-size);
-        // text-shadow: 1px 1px rgba($color: #000000, $alpha: 0.2);
 
         @media screen and (min-width: 1200px) {
             margin-left: calc(var(--element-size) * 2);

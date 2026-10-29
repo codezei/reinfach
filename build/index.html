@@ -12,7 +12,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#2874DF">
   <link rel="stylesheet" href="css/main.min.css">
   <link rel="stylesheet" href="css/libs/swiper-bundle.min.min.css">
@@ -42,21 +41,21 @@
   <header class="header section section-white">
     <div class="header__inner">
       <div class="header__logo">
-        <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide.png" alt="" width="170"></div>
+        <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide.webp" alt="" width="170"></div>
       </div>
       <div class="header__menu" id="main-menu">
-        <nav class="menu menu-row"><a class="menu__item" href="#services" data-tilt data-link="services">Leistungen</a><a class="menu__item" href="#price" data-tilt data-link="price">Preise</a><a class="menu__item" href="#works" data-tilt data-link="works">Vorher / Nachher</a><a class="menu__item" href="#reviews" data-tilt data-link="reviews">Bewertungen</a><a class="menu__item" href="#contacts" data-tilt data-link="contacts">Kontakt</a></nav>
+        <nav class="menu menu-row" aria-label="Hauptnavigation"><a class="menu__item" href="#services" data-tilt data-link="services">Leistungen</a><a class="menu__item" href="#price" data-tilt data-link="price">Preise</a><a class="menu__item" href="#works" data-tilt data-link="works">Vorher / Nachher</a><a class="menu__item" href="#reviews" data-tilt data-link="reviews">Bewertungen</a><a class="menu__item" href="#contacts" data-tilt data-link="contacts">Kontakt</a></nav>
         <div class="header__menu-btn text-center">
           <nav class="socials"><a class="socials__item btn btn-white btn-normal magnet-btn" href="tel:4915209655835" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з telegram</span><span class="btn-icon"><svg width="16" height="16"><use href="#tel"></use></svg></span></a><a class="socials__item btn btn-white btn-normal magnet-btn" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з whatsapp</span><span class="btn-icon"><svg width="16" height="16"><use href="#whatsapp"></use></svg></span></a><a class="socials__item btn btn-white btn-normal magnet-btn" href="mailto:reinfach.service@gmail.com" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з email</span><span class="btn-icon"><svg width="16" height="16"><use href="#email"></use></svg></span></a></nav>
         </div>
       </div>
-      <div class="header__burger"><button class="js-burger btn btn-clear btn-flush" id="burger" type="button" arial-label="Відкрити меню"><span class="sr-only">Відкрити меню</span><span class="cross"><span></span><span></span><span></span></span></button></div>
-      <div class="header__widget widget">
+      <div class="header__burger"><button class="js-burger btn btn-clear btn-flush" id="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-widget"><span class="sr-only">Menü öffnen</span><span class="cross" aria-hidden="true"><span></span><span></span><span></span></span></button></div>
+      <div class="header__widget widget" id="mobile-widget">
         <div class="widget__header">
-          <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide.png" alt="" width="170"></div>
+          <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide.webp" alt="" width="170"></div>
         </div>
         <div class="widget__body">
-          <nav class="menu menu-column widget__menu"><a class="menu__item" href="#services" data-link="services">Leistungen</a><a class="menu__item" href="#price" data-link="price">Preise</a><a class="menu__item" href="#works" data-link="works">Vorher / Nachher</a><a class="menu__item" href="#reviews" data-link="reviews">Bewertungen</a><a class="menu__item" href="#contacts" data-link="contacts">Kontakt</a></nav>
+          <nav class="menu menu-column widget__menu" aria-label="Mobile Navigation"><a class="menu__item" href="#services" data-link="services">Leistungen</a><a class="menu__item" href="#price" data-link="price">Preise</a><a class="menu__item" href="#works" data-link="works">Vorher / Nachher</a><a class="menu__item" href="#reviews" data-link="reviews">Bewertungen</a><a class="menu__item" href="#contacts" data-link="contacts">Kontakt</a></nav>
         </div>
         <div class="widget__footer">
           <nav class="socials"><a class="socials__item btn btn-white btn-normal magnet-btn" href="tel:4915209655835" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з telegram</span><span class="btn-icon"><svg width="16" height="16"><use href="#tel"></use></svg></span></a><a class="socials__item btn btn-white btn-normal magnet-btn" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з whatsapp</span><span class="btn-icon"><svg width="16" height="16"><use href="#whatsapp"></use></svg></span></a><a class="socials__item btn btn-white btn-normal magnet-btn" href="mailto:reinfach.service@gmail.com" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з email</span><span class="btn-icon"><svg width="16" height="16"><use href="#email"></use></svg></span></a></nav>
@@ -69,74 +68,73 @@
       <div class="container section__body custom-container">
         <div class="promo-grid">
           <div class="promo-grid__header">
-            <div class="row"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
-                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
-                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
-                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
-                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
-              </svg>
-              <div>
-                <div class="rating" style="--star-rating: 5;"></div>
-                <div><a class="text-link text-small" href="https://www.google.com/maps/place//@49.8169894,9.633954,17z/data=!3m1!4b1!4m3!3m2!1s0xa47e21315a994f81:0x3d2c936585698b85!12e1?entry=ttu&amp;g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">5,0 ★ Bewertungen auf Google Maps&nbsp;↗</a></div>
+            <div class="card">
+              <div class="card__header"><svg width="48" height="48" aria-hidden="true">
+                  <use href="#google"></use>
+                </svg>
+                <div>
+                  <div class="card__rating rating" style="--star-rating: 5;" aria-hidden="true"></div><a class="card__link text-link" href="https://www.google.com/maps/place//@49.8169894,9.633954,17z/data=!3m1!4b1!4m3!3m2!1s0xa47e21315a994f81:0x3d2c936585698b85!12e1?entry=ttu&amp;g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">5,0 ★ Bewertungen auf Google Maps&nbsp;↗</a>
+                </div>
               </div>
             </div>
             <h1 class="promo__title title"><span class="text-accent">Professionelle Polsterreinigung</span> in Würzburg vor Ort</h1>
-            <p class="promo__subtitle subtitle subtitle-extractor-left h5">Fasertiefe Reinheit für Ihr Sofa (Couch), Matratzen, Teppiche und Autositze direkt bei Ihnen zu Hause.</p>
+            <div class="custom-cta promo__custom-cta">
+              <p class="custom-cta__subtitle h4">Fasertiefe Reinheit für Ihr Sofa (Couch), Matratzen, Teppiche und Autositze – direkt bei Ihnen zu Hause (0 € Anfahrt in Würzburg).</p><img class="custom-cta__img" src="img/master.webp" alt="ReinFach Fachmann für mobile Polsterreinigung in Würzburg" width="200" height="300" fetchpriority="high">
+              <div class="custom-cta__row"><a class="custom-cta__btn btn btn-primary btn-large" href="+4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-icon pulse" aria-hidden="true"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span><span class="btn-text">Foto senden & Preis erhalten</span></a></div>
+            </div>
           </div>
           <div class="promo-grid__body">
-            <div class="categories">
-              <div class="swiper categories-navigation-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide h-auto"><button class="category" type="button"><span class="btn-text">1.&nbsp;Sofas&nbsp;& <br>Sessel</span></button></div>
-                  <div class="swiper-slide h-auto"><button class="category" type="button"><span class="btn-text">2.&nbsp;Matratzen&nbsp;& <br>Topper</span></button></div>
-                  <div class="swiper-slide h-auto"><button class="category" type="button"><span class="btn-text">3.&nbsp;Autositze&nbsp;& <br>Innenräume</span></button></div>
+            <div class="tabs" data-tabs>
+              <div class="tabs__nav" role="tablist" aria-label="Vorher-Nachher Beispiele"><button class="tabs__btn is-active" id="tab-sofas" type="button" role="tab" aria-selected="true" aria-controls="pane-sofas" data-tabs-target="sofas">Sofas & Couches</button><button class="tabs__btn" id="tab-matratzen" type="button" role="tab" aria-selected="false" aria-controls="pane-matratzen" data-tabs-target="matratzen">Matratzen</button><button class="tabs__btn" id="tab-autositze" type="button" role="tab" aria-selected="false" aria-controls="pane-autositze" data-tabs-target="autositze">Autositze</button></div>
+              <div class="tabs__body">
+                <div class="tabs__pane is-active" id="pane-sofas" role="tabpanel" aria-labelledby="tab-sofas" data-tabs-pane="sofas">
+                  <div class="ba-slider" data-ba-slider style="--pos: 50%" role="slider" tabindex="0" aria-label="Vergleich Vorher und Nachher" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="ba-slider__label ba-slider__label--after">Nachher →</span><span class="ba-slider__label ba-slider__label--before">← Vorher</span>
+                    <div class="ba-slider__after"><img class="ba-slider__img" src="img/process/sofa-after.webp" alt="" decoding="async" draggable="false"></div>
+                    <div class="ba-slider__before"><img class="ba-slider__img" src="img/process/sofa-before.webp" alt="" decoding="async" draggable="false"></div>
+                    <div class="ba-slider__divider" aria-hidden="true">
+                      <div class="ba-slider__handle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__pane" id="pane-matratzen" role="tabpanel" aria-labelledby="tab-matratzen" data-tabs-pane="matratzen">
+                  <div class="ba-slider" data-ba-slider style="--pos: 50%" role="slider" tabindex="0" aria-label="Vergleich Vorher und Nachher" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="ba-slider__label ba-slider__label--after">Nachher →</span><span class="ba-slider__label ba-slider__label--before">← Vorher</span>
+                    <div class="ba-slider__after"><img class="ba-slider__img" src="img/process/mattress-after.webp" alt="" decoding="async" draggable="false"></div>
+                    <div class="ba-slider__before"><img class="ba-slider__img" src="img/process/mattress-before.webp" alt="" decoding="async" draggable="false"></div>
+                    <div class="ba-slider__divider" aria-hidden="true">
+                      <div class="ba-slider__handle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__pane" id="pane-autositze" role="tabpanel" aria-labelledby="tab-autositze" data-tabs-pane="autositze">
+                  <div class="ba-slider" data-ba-slider style="--pos: 50%" role="slider" tabindex="0" aria-label="Vergleich Vorher und Nachher" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="ba-slider__label ba-slider__label--after">Nachher →</span><span class="ba-slider__label ba-slider__label--before">← Vorher</span>
+                    <div class="ba-slider__after"><img class="ba-slider__img" src="img/process/salon-after.webp" alt="" decoding="async" draggable="false"></div>
+                    <div class="ba-slider__before"><img class="ba-slider__img" src="img/process/salon-before.webp" alt="" decoding="async" draggable="false"></div>
+                    <div class="ba-slider__divider" aria-hidden="true">
+                      <div class="ba-slider__handle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="swiper categories-content-swiper scene" data-disallow-touch="true">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="beer-slider-wrapper">
-                    <div class="beer-slider" id="main-sofa-slider" data-beer-label="Nachher→">
-                      <picture><img src="img/process/main-sofa-after.png" alt="" fetchpriority="high"></picture>
-                      <div class="beer-reveal" data-beer-label="←Vorher">
-                        <picture><img src="img/process/main-sofa-before.png" alt="" fetchpriority="high"></picture>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="beer-slider-wrapper">
-                    <div class="beer-slider" id="mattress-2-slider" data-beer-label="Nachher→">
-                      <picture><img src="img/process/mattress-2-after.png" alt="" fetchpriority="high"></picture>
-                      <div class="beer-reveal" data-beer-label="←Vorher">
-                        <picture><img src="img/process/mattress-2-before.png" alt="" fetchpriority="high"></picture>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="beer-slider-wrapper">
-                    <div class="beer-slider" id="salon-2-slider" data-beer-label="Nachher→">
-                      <picture><img src="img/process/salon-2-after.png" alt="" fetchpriority="high"></picture>
-                      <div class="beer-reveal" data-beer-label="←Vorher">
-                        <picture><img src="img/process/salon-2-before.png" alt="" fetchpriority="high"></picture>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="promo-grid__footer">
-            <div class="promo__buttons"><a class="btn btn-primary btn-large w-100" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Foto senden &amp; Festpreis erhalten</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
           </div>
         </div>
       </div>
     </section>
-    <section class="services section section-white section-wave" id="services" data-nav="services"><svg class="section-wave__top">
+    <section class="services section section-white section-wave" id="services" data-nav="services"><svg class="section-wave__top" aria-hidden="true">
         <use href="#wave-top"></use>
-      </svg><svg class="section-wave__bottom">
+      </svg><svg class="section-wave__bottom" aria-hidden="true">
         <use href="#wave-bottom"></use>
       </svg>
       <div class="container">
@@ -146,66 +144,75 @@
             <h2 class="title section__header-title"><span class="text-accent">Polster-, Matratzen- & Autoreinigung</span> in Würzburg</h2>
           </div>
           <div class="section__header-col">
-            <p class="subtitle subtitle-extractor-right h5 section__header-subtitle">Fasertiefe Sauberkeit und Hygiene – <br>wir kommen mit Profi-Equipment direkt zu Ihnen nach Hause.</p>
+            <p class="subtitle subtitle-extractor-right section__header-subtitle">Fasertiefe Sauberkeit und Hygiene – <br>wir kommen mit Profi-Equipment direkt zu Ihnen nach Hause.</p>
           </div>
         </div>
-        <div class="row row-cols-lg-3">
-          <div class="col">
-            <div class="card card-white card-large h-100 card-grid card-rounded card-shadow">
-              <div class="card__img"><img src="img/service-furniture.jpg" alt=""><svg class="wave wave-bottom">
-                  <use href="#wave-top"></use>
-                </svg>
-                <h3 class="h4 card__title m-0">Polster- <br>& Sofareinigung</h3>
+        <div class="section__body">
+          <div class="swiper services-swiper swiper-overflow-visible">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide h-auto">
+                <div class="card card-white card-large h-100 card-grid card-rounded card-shadow">
+                  <div class="card__img"><img src="img/service-1.webp" alt="Professionelle Polster- und Sofareinigung in Würzburg vor Ort" loading="lazy" width="400" height="260"><svg class="wave wave-bottom" aria-hidden="true">
+                      <use href="#wave-top"></use>
+                    </svg>
+                    <h3 class="h4 card__title m-0">Polster-, Sofa- <br>& Couchreinigung</h3>
+                  </div>
+                  <div class="card__body">
+                    <p class="card__text">Wir entfernen tiefsitzenden Schmutz, hartnäckige Flecken und unangenehme Gerüche schonend aus allen Stoffarten. Ihre Lieblingsmöbel sehen wieder aus wie neu.</p>
+                    <ul class="card__list list-check list">
+                      <li>Sofas, Couches, Ecksofas, Sessel & Stühle</li>
+                      <li>Entfernung von Kaffee-, Wein-, Fett- & Tierflecken</li>
+                      <li>Farbauffrischung & Geruchsneutralisation</li>
+                      <li>Schonend für die Fasern, schnelle Trocknung</li>
+                    </ul>
+                  </div>
+                  <div class="card__footer btn-row"><a class="btn btn-primary magnet-btn btn-normal flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Polster reinigen lassen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835" aria-label="Jetzt für Polsterreinigung anrufen"><span class="btn-icon" aria-hidden="true"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+                </div>
               </div>
-              <div class="card__body">
-                <p class="card__text">Wir entfernen tiefsitzenden Schmutz, hartnäckige Flecken und unangenehme Gerüche schonend aus allen Stoffarten. Ihre Lieblingsmöbel sehen wieder aus wie neu.</p>
-                <ul class="card__list list-check list">
-                  <li>Sofas, Couches, Ecksofas, Sessel & Stüh</li>
-                  <li>Entfernung von Kaffee-, Wein-, Fett- & Tierflecken</li>
-                  <li>Farbauffrischung & Geruchsneutralisation</li>
-                  <li>Schonend für die Fasern, schnelle Trocknung</li>
-                </ul>
+              <div class="swiper-slide h-auto">
+                <div class="card card-white card-large h-100 card-grid card-rounded card-shadow">
+                  <div class="card__img"><img src="img/service-2.webp" alt="Hygienische Matratzenreinigung und Milbenentfernung in Würzburg" loading="lazy" width="400" height="260"><svg class="wave wave-bottom" aria-hidden="true">
+                      <use href="#wave-top"></use>
+                    </svg>
+                    <h3 class="h4 card__title m-0">Matratzen- <br>& Topperreinigung</h3>
+                  </div>
+                  <div class="card__body">
+                    <p class="card__text">Für einen gesunden und erholsamen Schlaf. Wir befreien Ihre Matratzen fasertief von Hausstaubmilben, Bakterien, Schweiß und unschönen Flecken – ganz ohne aggressive Chemie.</p>
+                    <ul class="card__list list-check list">
+                      <li>Einzel-, Doppelmatratzen, Topper & Boxspringbetten</li>
+                      <li>Ideal für Allergiker (99 % Milbenentfernung)</li>
+                      <li>Umweltfreundliche & sichere Reinigungsmittel</li>
+                      <li>Hygienische Frische ohne Chemiegeruch</li>
+                    </ul>
+                  </div>
+                  <div class="card__footer btn-row"><a class="btn btn-primary magnet-btn btn-normal flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Matratze reinigen lassen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835" aria-label="Jetzt für Matratzenreinigung anrufen"><span class="btn-icon" aria-hidden="true"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+                </div>
               </div>
-              <div class="card__footer"><a class="btn btn-primary magnet-btn btn-normal" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Polster reinigen lassen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
+              <div class="swiper-slide h-auto">
+                <div class="card card-white card-large h-100 card-grid card-rounded card-shadow">
+                  <div class="card__img"><img src="img/service-3.webp" alt="Mobile Auto-Innenreinigung und Autositze reinigen in Würzburg" loading="lazy" width="400" height="260"><svg class="wave wave-bottom" aria-hidden="true">
+                      <use href="#wave-top"></use>
+                    </svg>
+                    <h3 class="h4 card__title m-0">Auto-<br>Innenreinigung</h3>
+                  </div>
+                  <div class="card__body">
+                    <p class="card__text">Holen Sie sich das Neuwagen-Gefühl zurück. Wir reinigen Ihre Autositze und Teppiche gründlich von Alltagsflecken, Staub, Tierhaaren und Gerüchen direkt bei Ihnen vor Ort.</p>
+                    <ul class="card__list list-check list">
+                      <li>Vordersitze, Rücksitz, Fahrzeugboden & Kofferraum</li>
+                      <li>Gegen Wasserflecken, Salzränder & Nikotingeruch</li>
+                      <li>Ideal vor dem Verkauf oder der Leasingrückgabe</li>
+                      <li>Mobile Polsteraufbereitung direkt bei Ihnen vor Ort</li>
+                    </ul>
+                  </div>
+                  <div class="card__footer btn-row"><a class="btn btn-primary magnet-btn btn-normal flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Autositze reinigen lassen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835" aria-label="Jetzt für Auto-Innenreinigung anrufen"><span class="btn-icon" aria-hidden="true"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card card-white card-large h-100 card-grid card-rounded card-shadow">
-              <div class="card__img"><img src="img/service-mattress.jpg" alt=""><svg class="wave wave-bottom">
-                  <use href="#wave-top"></use>
-                </svg>
-                <h3 class="h4 card__title m-0">Matratzen- <br>& Topperreinigung</h3>
-              </div>
-              <div class="card__body">
-                <p class="card__text">Für einen gesunden und erholsamen Schlaf. Wir befreien Ihre Matratzen fasertief von Hausstaubmilben, Bakterien, Schweiß und unschönen Flecken – ganz ohne aggressive Chemie.</p>
-                <ul class="card__list list-check list">
-                  <li>Einzel-, Doppelmatratzen, Topper & Boxspringbetten</li>
-                  <li>Ideal für Allergiker (99% Milbenentfernung)</li>
-                  <li>Umweltfreundliche & sichere Reinigungsmittel</li>
-                  <li>Hygienische Frische ohne Chemiegeruch</li>
-                </ul>
-              </div>
-              <div class="card__footer"><a class="btn btn-primary magnet-btn btn-normal" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Matratze reinigen lassen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card card-white card-large h-100 card-grid card-rounded card-shadow">
-              <div class="card__img"><img src="img/service-salon.jpg" alt=""><svg class="wave wave-bottom">
-                  <use href="#wave-top"></use>
-                </svg>
-                <h3 class="h4 card__title m-0">Auto-<br>Innenreinigung</h3>
-              </div>
-              <div class="card__body">
-                <p class="card__text">Holen Sie sich das Neuwagen-Gefühl zurück. Wir reinigen Ihre Autositze und Teppiche gründlich von Alltagsflecken, Staub, Tierhaaren und Gerüchen direkt bei Ihnen vor Ort.</p>
-                <ul class="card__list list-check list">
-                  <li>Vordersitze, Rücksitz, Fahrzeugboden & Kofferraum</li>
-                  <li>Gegen Wasserflecken, Salzränder & Nikotingeruch</li>
-                  <li>Ideal vor dem Verkauf oder der Leasingrückgabe</li>
-                  <li>Bequem bei Ihnen vor Ort</li>
-                </ul>
-              </div>
-              <div class="card__footer"><a class="btn btn-primary magnet-btn btn-normal" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Autositze reinigen lassen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
-            </div>
+        </div>
+        <div class="section__footer">
+          <div class="swiper-navigation"><button class="btn btn-secondary btn-normal btn-shadow services-navigation-button-prev" type="button" aria-label="Vorherige Leistung"><span class="btn-icon" aria-hidden="true"><svg width="16" height="16"><use href="#chevron-left"></use></svg></span></button>
+            <div class="swiper-pagination services-pagination swiper-pagination-static w-auto"></div><button class="btn btn-secondary btn-normal btn-shadow services-navigation-button-next" type="button" aria-label="Nächste Leistung"><span class="btn-icon" aria-hidden="true"><svg width="16" height="16"><use href="#chevron-right"></use></svg></span></button>
           </div>
         </div>
       </div>
@@ -215,22 +222,22 @@
         <div class="section__header">
           <div class="section__header-col">
             <div class="pre-title section__header-pre-title">Transparente Preise</div>
-            <h2 class="title section__header-title"><span class="text-accent">Faire Festpreise</span> für Ihre Polsterreinigung</h2>
+            <h2 class="title section__header-title"><span class="text-accent">Faire Festpreise</span> für Ihre Polsterreinigung in Würzburg</h2>
           </div>
           <div class="section__header-col">
-            <p class="subtitle subtitle-extractor-right h5 section__header-subtitle">Keine Überraschungen vor Ort: Alle Preise verstehen sich inklusive 0 € Anfahrt in Würzburg. Senden Sie uns einfach ein Foto per WhatsApp für Ihr verbindliches Festpreis-Angebot.</p>
+            <p class="subtitle subtitle-extractor-right section__header-subtitle">Keine Überraschungen vor Ort: Alle Preise verstehen sich inklusive 0 € Anfahrt in Würzburg. Senden Sie uns einfach ein Foto per WhatsApp für Ihr verbindliches Festpreis-Angebot.</p>
           </div>
         </div>
         <div class="section__body">
           <div class="card card-white card-rounded card-shadow card-normal">
-            <div class="row row-cols-xl-3">
+            <div class="row row-cols-lg-2 row-cols-xl-3">
               <div class="price-item col">
-                <h3 class="price-item__title">Polster- &amp; Sofareinigung</h3>
+                <h3 class="h4 price-item__title">Polster- &amp; Sofareinigung</h3>
                 <div class="price-item__table">
                   <table class="price-table">
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-stuhl.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-stuhl.webp" alt="" width="100">
                           <p>Stuhl</p>
                         </div>
                       </td>
@@ -240,7 +247,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-sessel.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-sessel.webp" alt="" width="100">
                           <p>Sessel</p>
                         </div>
                       </td>
@@ -250,7 +257,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-sofa.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-sofa.webp" alt="" width="100">
                           <p>Sofa (2 Sitze)</p>
                         </div>
                       </td>
@@ -260,7 +267,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-ecksofa.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-ecksofa.webp" alt="" width="100">
                           <p>Ecksofa</p>
                         </div>
                       </td>
@@ -270,7 +277,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-u-sofa.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-u-sofa.webp" alt="" width="100">
                           <p>Großes U-Sofa</p>
                         </div>
                       </td>
@@ -280,15 +287,17 @@
                     </tr>
                   </table>
                 </div>
-                <div class="price-item__footer"><a class="btn btn-primary btn-large magnet-btn w-100" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Polster anfragen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
+                <div class="price-item__footer">
+                  <div class="btn-row"><a class="btn btn-primary btn-normal magnet-btn flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Polster anfragen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835"><span class="btn-icon"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+                </div>
               </div>
               <div class="price-item col">
-                <h3 class="price-item__title">Matratzen- &amp; Topperreinigung</h3>
+                <h3 class="h4 price-item__title">Matratzen- &amp; Topperreinigung</h3>
                 <div class="price-item__table">
                   <table class="price-table">
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-einzelmatratze.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-einzelmatratze.webp" alt="" width="100">
                           <p>Einzelmatratze</p>
                         </div>
                       </td>
@@ -298,7 +307,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-doppelmatratze.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-doppelmatratze.webp" alt="" width="100">
                           <p>Doppelmatratze</p>
                         </div>
                       </td>
@@ -308,15 +317,17 @@
                     </tr>
                   </table>
                 </div>
-                <div class="price-item__footer"><a class="btn btn-primary btn-large magnet-btn w-100" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Matratze anfragen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
+                <div class="price-item__footer">
+                  <div class="btn-row"><a class="btn btn-primary btn-normal magnet-btn flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Matratze anfragen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835"><span class="btn-icon"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+                </div>
               </div>
               <div class="price-item col">
-                <h3 class="price-item__title">Auto-Innenreinigung</h3>
+                <h3 class="h4 price-item__title">Auto-Innenreinigung</h3>
                 <div class="price-item__table">
                   <table class="price-table">
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-vordersitze.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-vordersitze.webp" alt="" width="100">
                           <p>Vordersitze</p>
                         </div>
                       </td>
@@ -326,7 +337,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-ruecksitz.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-ruecksitz.webp" alt="" width="100">
                           <p>Rücksitz</p>
                         </div>
                       </td>
@@ -336,7 +347,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-fahrzeugboden.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-fahrzeugboden.webp" alt="" width="100">
                           <p>Fahrzeugboden</p>
                         </div>
                       </td>
@@ -346,7 +357,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-kofferraum.png" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-kofferraum.webp" alt="" width="100">
                           <p>Kofferraum</p>
                         </div>
                       </td>
@@ -356,14 +367,16 @@
                     </tr>
                   </table>
                 </div>
-                <div class="price-item__footer"><a class="btn btn-primary btn-large magnet-btn w-100" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Autoreinigung anfragen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
+                <div class="price-item__footer">
+                  <div class="btn-row"><a class="btn btn-primary btn-normal magnet-btn flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Autoreinigung anfragen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835"><span class="btn-icon"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="section__footer">
-          <p class="text-small">* Alle Preise sind Endpreise inkl. 0 € Anfahrt in Würzburg. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
-          <p class="text-small">* Warum „ab“-Preise? Der genaue Festpreis richtet sich nach Größe und Verschmutzungsgrad – und wird Ihnen nach einem kurzen Foto per WhatsApp vorab zu 100 % verbindlich garantiert.</p>
+        <div class="section__footer text-center mt-4">
+          <p class="text-small text-muted mb-2">* Alle Preise sind Endpreise inkl. 0 € Anfahrt in Würzburg. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
+          <p class="text-small text-muted">Warum „ab“-Preise? Der genaue Festpreis richtet sich nach Größe und Verschmutzungsgrad – und wird Ihnen nach einem kurzen Foto per WhatsApp vorab zu 100 % verbindlich garantiert.</p>
         </div>
       </div>
     </section>
@@ -375,7 +388,7 @@
             <h2 class="title section__header-title"><span class="text-accent">In 4 einfachen Schritten</span> zu&nbsp;sauberen Polstern</h2>
           </div>
           <div class="section__header-col">
-            <p class="subtitle subtitle-extractor-right h5 section__header-subtitle">Von der schnellen Foto-Anfrage per WhatsApp bis zur fasertiefen Reinigung bei Ihnen zu Hause in Würzburg – komplett stressfrei, pünktlich und mit verbindlicher Festpreisgarantie.</p>
+            <p class="subtitle subtitle-extractor-right section__header-subtitle">Von der schnellen Foto-Anfrage per WhatsApp bis zur fasertiefen Reinigung bei Ihnen zu Hause in Würzburg – komplett stressfrei, pünktlich und mit verbindlicher Festpreisgarantie.</p>
           </div>
         </div>
         <div class="section__body">
@@ -433,7 +446,9 @@
         <div class="section__footer">
           <div class="row row-cols-lg-2 justify-content-between align-items-center">
             <div><strong>Bereit für Schritt 01?</strong> Antwortzeit per WhatsApp in der Regel unter <span class="text-accent">15 Minuten</span>.</div>
-            <div><a class="btn btn-primary btn-normal" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Jetzt Foto per WhatsApp senden</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
+            <div>
+              <div class="btn-row"><a class="btn btn-primary btn-normal magnet-btn flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Jetzt Foto per WhatsApp senden</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835"><span class="btn-icon"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+            </div>
           </div>
         </div>
       </div>
@@ -455,7 +470,7 @@
               <div class="swiper-slide">
                 <div class="video js-video" data-video-src="img/video-1.mp4">
                   <div class="video__poster">
-                    <picture><img src="img/video-poster-1.png" alt="Professionelle Polster- und Sofareinigung vor Ort" width="720" height="1280" loading="lazy"></picture>
+                    <picture><img src="img/video-poster-1.webp" alt="Professionelle Polster- und Sofareinigung vor Ort" width="720" height="1280" loading="lazy"></picture>
                   </div>
                   <div class="video__player-wrap"></div><button class="video__btn" type="button" aria-label="Odtwórz wideo"><svg class="icon-play" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z"></path>
@@ -464,14 +479,14 @@
                     </svg></button>
                   <div class="video__info">
                     <div class="video__tags"><span class="video__tag">Polsterreinigung</span><span class="video__tag">Sofareinigung</span></div>
-                    <h3 class="video__title">Tiefenreinigung für Sofas</h3>
+                    <h3 class="h6 video__title">Tiefenreinigung für Sofas</h3>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="video js-video" data-video-src="img/video-2.mp4">
                   <div class="video__poster">
-                    <picture><img src="img/video-poster-2.png" alt="Schonende Textilreinigung von Polstermöbeln" width="720" height="1280" loading="lazy"></picture>
+                    <picture><img src="img/video-poster-2.webp" alt="Schonende Textilreinigung von Polstermöbeln" width="720" height="1280" loading="lazy"></picture>
                   </div>
                   <div class="video__player-wrap"></div><button class="video__btn" type="button" aria-label="Odtwórz wideo"><svg class="icon-play" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z"></path>
@@ -480,14 +495,14 @@
                     </svg></button>
                   <div class="video__info">
                     <div class="video__tags"><span class="video__tag">Polsterreinigung</span><span class="video__tag">Textilpflege</span></div>
-                    <h3 class="video__title">Fasertiefe Polsterreinigung</h3>
+                    <h3 class="h6 video__title">Fasertiefe Polsterreinigung</h3>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="video js-video" data-video-src="img/video-3.mp4">
                   <div class="video__poster">
-                    <picture><img src="img/video-poster-3.png" alt="Gründliche Matratzenreinigung und Milbenentfernung" width="720" height="1280" loading="lazy"></picture>
+                    <picture><img src="img/video-poster-3.webp" alt="Gründliche Matratzenreinigung und Milbenentfernung" width="720" height="1280" loading="lazy"></picture>
                   </div>
                   <div class="video__player-wrap"></div><button class="video__btn" type="button" aria-label="Odtwórz wideo"><svg class="icon-play" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z"></path>
@@ -496,14 +511,14 @@
                     </svg></button>
                   <div class="video__info">
                     <div class="video__tags"><span class="video__tag">Matratzenreinigung</span><span class="video__tag">Allergiker</span></div>
-                    <h3 class="video__title">Hygienische Matratzenreinigung</h3>
+                    <h3 class="h6 video__title">Hygienische Matratzenreinigung</h3>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="video js-video" data-video-src="img/video-4.mp4">
                   <div class="video__poster">
-                    <picture><img src="img/video-poster-4.png" alt="Matratzen-Tiefenreinigung mit professionellem Equipment" width="720" height="1280" loading="lazy"></picture>
+                    <picture><img src="img/video-poster-4.webp" alt="Matratzen-Tiefenreinigung mit professionellem Equipment" width="720" height="1280" loading="lazy"></picture>
                   </div>
                   <div class="video__player-wrap"></div><button class="video__btn" type="button" aria-label="Odtwórz wideo"><svg class="icon-play" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z"></path>
@@ -512,14 +527,14 @@
                     </svg></button>
                   <div class="video__info">
                     <div class="video__tags"><span class="video__tag">Matratzenreinigung</span><span class="video__tag">Milbenfrei</span></div>
-                    <h3 class="video__title">Saubere &amp; frische Matratzen</h3>
+                    <h3 class="h6 video__title">Saubere &amp; frische Matratzen</h3>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="video js-video" data-video-src="img/video-5.mp4">
                   <div class="video__poster">
-                    <picture><img src="img/video-posster-5.png" alt="Professionelle Auto-Innenreinigung in Würzburg" width="720" height="1280" loading="lazy"></picture>
+                    <picture><img src="img/video-posster-5.webp" alt="Professionelle Auto-Innenreinigung in Würzburg" width="720" height="1280" loading="lazy"></picture>
                   </div>
                   <div class="video__player-wrap"></div><button class="video__btn" type="button" aria-label="Odtwórz wideo"><svg class="icon-play" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z"></path>
@@ -528,14 +543,14 @@
                     </svg></button>
                   <div class="video__info">
                     <div class="video__tags"><span class="video__tag">Autoreinigung</span><span class="video__tag">Innenraum</span></div>
-                    <h3 class="video__title">Auto-Innenreinigung wie neu</h3>
+                    <h3 class="h6 video__title">Auto-Innenreinigung wie neu</h3>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="video js-video" data-video-src="img/video-6.mp4">
                   <div class="video__poster">
-                    <picture><img src="img/video-poster-6.png" alt="Intensive Teppichreinigung mit Sprühextraktion" width="720" height="1280" loading="lazy"></picture>
+                    <picture><img src="img/video-poster-6.webp" alt="Intensive Teppichreinigung mit Sprühextraktion" width="720" height="1280" loading="lazy"></picture>
                   </div>
                   <div class="video__player-wrap"></div><button class="video__btn" type="button" aria-label="Odtwórz wideo"><svg class="icon-play" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z"></path>
@@ -544,14 +559,14 @@
                     </svg></button>
                   <div class="video__info">
                     <div class="video__tags"><span class="video__tag">Teppichreinigung</span><span class="video__tag">Fasertief</span></div>
-                    <h3 class="video__title">Teppichreinigung vom Profi</h3>
+                    <h3 class="h6 video__title">Teppichreinigung vom Profi</h3>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="video js-video" data-video-src="img/video-7.mp4">
                   <div class="video__poster">
-                    <picture><img src="img/video-poster-7.png" alt="Teppichreinigung bei bunten Mustern und Teppichen" width="720" height="1280" loading="lazy"></picture>
+                    <picture><img src="img/video-poster-7.webp" alt="Teppichreinigung bei bunten Mustern und Teppichen" width="720" height="1280" loading="lazy"></picture>
                   </div>
                   <div class="video__player-wrap"></div><button class="video__btn" type="button" aria-label="Odtwórz wideo"><svg class="icon-play" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z"></path>
@@ -560,14 +575,14 @@
                     </svg></button>
                   <div class="video__info">
                     <div class="video__tags"><span class="video__tag">Teppichreinigung</span><span class="video__tag">Farbauffrischung</span></div>
-                    <h3 class="video__title">Farbauffrischung für Teppiche</h3>
+                    <h3 class="h6 video__title">Farbauffrischung für Teppiche</h3>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="video js-video" data-video-src="img/video-8.mp4">
                   <div class="video__poster">
-                    <picture><img src="img/video-poster-8.png" alt="Professionelle Fensterreinigung und Glaspflege" width="720" height="1280" loading="lazy"></picture>
+                    <picture><img src="img/video-poster-8.webp" alt="Professionelle Fensterreinigung und Glaspflege" width="720" height="1280" loading="lazy"></picture>
                   </div>
                   <div class="video__player-wrap"></div><button class="video__btn" type="button" aria-label="Odtwórz wideo"><svg class="icon-play" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z"></path>
@@ -576,7 +591,7 @@
                     </svg></button>
                   <div class="video__info">
                     <div class="video__tags"><span class="video__tag">Fensterreinigung</span><span class="video__tag">Glasreinigung</span></div>
-                    <h3 class="video__title">Klares Glas durch Profi-Fensterreinigung</h3>
+                    <h3 class="h6 video__title">Klares Glas durch Profi-Fensterreinigung</h3>
                   </div>
                 </div>
               </div>
@@ -598,26 +613,23 @@
             <h2 class="title section__header-title"><span class="text-accent">Echte Erfahrungen</span> aus Würzburg & Umgebung</h2>
           </div>
           <div class="section__header-col">
-            <p class="subtitle subtitle-extractor-right h5 section__header-subtitle">Überzeugen Sie sich von unserer Arbeitsqualität: Das berichten Privat- und Geschäftskunden über unsere mobile Polster-, Matratzen- und Auto-Innenreinigung direkt vor Ort.</p>
+            <p class="subtitle subtitle-extractor-right section__header-subtitle">Überzeugen Sie sich von unserer Arbeitsqualität: Das berichten Privat- und Geschäftskunden über unsere mobile Polster-, Matratzen- und Auto-Innenreinigung direkt vor Ort.</p>
           </div>
         </div>
         <div class="section__body">
           <div class="card card-white card-normal card-rounded card-shadow card-grid">
+            <div class="card card-grid h-100">
+              <div class="card__header"><svg width="64" height="64">
+                  <use href="#google"></use>
+                </svg>
+                <div>
+                  <div class="card__rating rating" style="--star-rating: 5;"></div>
+                  <div>5,0 von 5 Sternen · 100 % Weiterempfehlung</div><a class="card__link text-link" href="https://www.google.com/maps/place//@49.8169894,9.633954,17z/data=!3m1!4b1!4m3!3m2!1s0xa47e21315a994f81:0x3d2c936585698b85!12e1?entry=ttu&amp;g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Alle Rezensionen auf Google ansehen&nbsp;↗</a>
+                </div>
+              </div>
+            </div>
             <div class="swiper reviews-swiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto">
-                  <div class="card card-grid h-100">
-                    <div class="card__header"><svg width="48" height="48">
-                        <use href="#google"></use>
-                      </svg>
-                      <div class="card__rating rating" style="--star-rating: 5;"></div>
-                    </div>
-                    <div class="card__body">
-                      <p class="card__text">5,0 von 5 Sternen · 100 % Weiterempfehlung</p><a class="card__link text-link" href="https://www.google.com/maps/place//@49.8169894,9.633954,17z/data=!3m1!4b1!4m3!3m2!1s0xa47e21315a994f81:0x3d2c936585698b85!12e1?entry=ttu&amp;g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Alle Rezensionen auf Google ansehen →</a>
-                    </div>
-                    <div class="card__footer"><a class="btn btn-primary magnet-btn btn-normal" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Foto senden &amp; Preis erhalten</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
-                  </div>
-                </div>
                 <div class="swiper-slide h-auto">
                   <div class="card card-grid h-100" data-tilt>
                     <div class="card__body">
@@ -784,18 +796,153 @@
             </div>
           </div>
         </div>
-        <div class="default-grid__footer"><a class="btn btn-primary btn-normal magnet-btn" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Frage per WhatsApp stellen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a></div>
+        <div class="default-grid__footer">
+          <div class="btn-row"><a class="btn btn-primary btn-normal magnet-btn flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Frage per WhatsApp stellen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835"><span class="btn-icon"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+        </div>
       </div>
     </section>
-    <section class="contacts section section-secondary" id="contacts" data-nav="contacts">
-      <div class="container custom-container">
+    <section class="locations section section-secondary" id="locations">
+      <div class="container default-grid custom-container">
+        <div class="default-grid__header">
+          <div class="pre-title">Regionale Verfügbarkeit</div>
+          <h2 class="title">Wir sind in Würzburg und dem gesamten Umkreis für Sie da</h2>
+          <p class="subtitle">Kعnnen wir auch zu Ihnen kommen? Entdecken Sie unsere Anfahrtszonen im Umkreis.</p>
+        </div>
+        <div class="default-grid__body">
+          <div class="row row-cols-sm-2">
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Höchberg</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Veitshöchheim</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Gerbrunn</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Rottendorf</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Estenfeld</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Randersacker</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Waldbüttelbrunn</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Rimpar</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Ochsenfurt</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Kitzingen</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Karlstadt</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Marktheidenfeld</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-white card-normal card-rounded card-shadow">
+                <div class="card__header"><svg width="24" height="24">
+                    <use href="#geo"></use>
+                  </svg>
+                  <h3 class="h6 card__title m-0">Erlenbach</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="default-grid__footer">
+          <div class="btn-row"><a class="btn btn-primary btn-normal magnet-btn flex-grow-1" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-text">Frage per WhatsApp stellen</span><span class="btn-icon"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span></a><a class="btn btn-normal btn-white magnet-btn flex-shrink-0" href="tel:+4915209655835"><span class="btn-icon"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts section section-transparent" id="contacts" data-nav="contacts">
+      <div class="container">
         <div class="section__header">
           <div class="section__header-col">
             <div class="pre-title section__header-pre-title">Kontakt & Einsatzgebiet</div>
             <h2 class="title section__header-title"><span class="text-accent">Jetzt Termin anfragen</span> in Würzburg & Umgebung</h2>
           </div>
           <div class="section__header-col">
-            <p class="subtitle subtitle-extractor-right h5 section__header-subtitle">Senden Sie uns einfach ein kurzes Foto Ihrer Polster per WhatsApp oder rufen Sie uns an. Wir sind in ganz Würzburg (0 € Anfahrt) und im Umkreis von bis zu 30 km schnell für Sie vor Ort.</p>
+            <p class="subtitle subtitle-extractor-right section__header-subtitle">Senden Sie uns einfach ein kurzes Foto Ihrer Polster per WhatsApp oder rufen Sie uns an. Wir sind in ganz Würzburg (0 € Anfahrt) und im Umkreis von bis zu 30 km schnell für Sie vor Ort.</p>
           </div>
         </div>
         <div class="card card-white card-rounded card-shadow card-grid card-normal">
@@ -928,6 +1075,15 @@
         <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
         <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
       </symbol>
+      <symbol id="instagram" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewbox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+      </symbol>
+      <symbol id="tiktok" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewbox="0 0 16 16">
+        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"></path>
+      </symbol>
+      <symbol id="geo" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewbox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"></path>
+      </symbol>
     </svg>
   </main>
   <footer class="footer section section-dark">
@@ -935,7 +1091,7 @@
       <div class="row row-cols-md-2 row-cols-lg-3">
         <div class="col">
           <div class="footer__logo">
-            <div class="logo"><span class="sr-only">Rein Fach logo</span><img src="img/logo-light.svg" alt="" width="100"></div>
+            <div class="logo"><span class="sr-only">Rein Fach logo</span><img src="img/logo-wide-light.webp" alt="" width="200"></div>
           </div>
           <div class="footer__info">
             <div>ReinFach – Inh. Yurii Kovalskyi<br></div>
@@ -944,7 +1100,9 @@
           </div>
           <div class="footer__socials">
             <h3 class="h6">Kontakt:</h3>
-            <nav class="socials"><a class="socials__item btn btn-primary btn-normal magnet-btn" href="tel:4915209655835" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з telegram</span><span class="btn-icon"><svg width="16" height="16"><use href="#tel"></use></svg></span></a><a class="socials__item btn btn-primary btn-normal magnet-btn" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з whatsapp</span><span class="btn-icon"><svg width="16" height="16"><use href="#whatsapp"></use></svg></span></a><a class="socials__item btn btn-primary btn-normal magnet-btn" href="mailto:reinfach.service@gmail.com" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з email</span><span class="btn-icon"><svg width="16" height="16"><use href="#email"></use></svg></span></a></nav>
+            <nav class="socials"><a class="socials__item btn btn-primary btn-normal magnet-btn" href="tel:4915209655835" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з telegram</span><span class="btn-icon"><svg width="16" height="16"><use href="#tel"></use></svg></span></a><a class="socials__item btn btn-primary btn-normal magnet-btn" href="https://wa.me/4915209655835" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з whatsapp</span><span class="btn-icon"><svg width="16" height="16"><use href="#whatsapp"></use></svg></span></a><a class="socials__item btn btn-primary btn-normal magnet-btn" href="mailto:reinfach.service@gmail.com" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Зв'язатись з email</span><span class="btn-icon"><svg width="16" height="16"><use href="#email"></use></svg></span></a></nav><br>
+            <h3 class="h6">Social-Media-Kanäle:</h3>
+            <nav class="socials"><a class="socials__item btn btn-primary btn-normal magnet-btn btn-shadow" href="https://instagram.com/YOUR_ACCOUNT" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Перейти в Instagram</span><span class="btn-icon"><svg width="16" height="16"><use href="#instagram"></use></svg></span></a><a class="socials__item btn btn-primary btn-normal magnet-btn btn-shadow" href="https://tiktok.com/@YOUR_ACCOUNT" target="_blank" rel="noopener noreferrer" data-tilt><span class="sr-only">Перейти в TikTok</span><span class="btn-icon"><svg width="16" height="16"><use href="#tiktok"></use></svg></span></a></nav>
           </div>
         </div>
         <div class="col">

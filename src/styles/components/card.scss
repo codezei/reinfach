@@ -1,14 +1,9 @@
 .card,
 .btn {
-    // Автоматичні тони тексту всередині картки/кнопки через color-mix
-    --title-color: color-mix(in srgb, var(--element-text) 65%, var(--color-1-base));
-    --text-color: color-mix(in srgb, var(--element-text) 68%, var(--element-bg));
-    --list-color: color-mix(in srgb, var(--element-text) 92%, var(--element-bg));
-    --divider-color: color-mix(in srgb, var(--element-text) 10%, var(--element-bg));
 
     overflow: hidden;
     background: var(--element-bg);
-    color: var(--text-color);
+    color: var(--element-text);
     position: relative;
     z-index: 1;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -49,8 +44,6 @@
     &-primary {
         --element-bg: var(--color-1-base);
         --element-text: #ffffff;
-        --title-color: #ffffff;
-        --text-color: color-mix(in srgb, #ffffff 100%, var(--color-1-base));
     }
 
     &-secondary {
@@ -60,25 +53,21 @@
 
     &-white {
         --element-bg: #ffffff;
-        --element-text: var(--color-1-shade-3); // Замість shade-2 ставимо глибокий shade-3!
-
-        .swiper-slide-thumb-active & {
-            --element-bg: var(--color-1-shade-2);
-            --element-text: #ffffff;
-            --title-color: #ffffff;
-        }
+        --element-text: var(--color-1-shade-3);
     }
 
     &-dark {
         --element-bg: var(--color-1-shade-3);
         --element-text: #ffffff;
-        --title-color: #ffffff;
-        --text-color: color-mix(in srgb, #ffffff 80%, var(--color-1-shade-3));
     }
 
     // Розміри
     &-large {
-        --element-size: 1.25rem;
+        --element-size: 1rem;
+
+        @media screen and (min-width: 576px) {
+            --element-size: 1.25rem;
+        }
     }
 
     &-normal {
@@ -94,10 +83,6 @@
     overflow: hidden;
     padding: var(--element-size);
     font-size: 16px;
-
-    // &[class=hover] {
-    //     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    // }
 
     &:is(a) {
         text-decoration: none;

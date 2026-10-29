@@ -3,7 +3,7 @@ header.header.section.section-white
         .header__logo
             include logo
         .header__menu#main-menu
-            nav.menu.menu-row
+            nav.menu.menu-row(aria-label="Hauptnavigation")
                 a.menu__item(href="#services" data-tilt data-link="services") Leistungen
                 a.menu__item(href="#price" data-tilt data-link="price") Preise
                 a.menu__item(href="#works" data-tilt data-link="works") Vorher / Nachher
@@ -12,17 +12,17 @@ header.header.section.section-white
             .header__menu-btn.text-center
                 include socials
         .header__burger
-            button.js-burger.btn.btn-clear.btn-flush#burger(type="button" arial-label="Відкрити меню")
-                span.sr-only Відкрити меню
-                span.cross
+            button.js-burger.btn.btn-clear.btn-flush#burger(type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-widget")
+                span.sr-only Menü öffnen
+                span.cross(aria-hidden="true")
                     span
                     span
                     span
-        .header__widget.widget
+        .header__widget.widget#mobile-widget
             .widget__header
                 include logo
             .widget__body
-                nav.menu.menu-column.widget__menu
+                nav.menu.menu-column.widget__menu(aria-label="Mobile Navigation")
                     a.menu__item(href="#services" data-link="services") Leistungen
                     a.menu__item(href="#price" data-link="price") Preise
                     a.menu__item(href="#works" data-link="works") Vorher / Nachher

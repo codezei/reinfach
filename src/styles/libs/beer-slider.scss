@@ -1,8 +1,14 @@
+
+.beer-slider-wrapper {
+    position: relative;
+    z-index: 9;
+}
 .beer-slider {
     display: inline-block;
     overflow: hidden;
     position: relative;
     user-select: none;
+    z-index: 9;
 }
 
 .beer-slider *,
@@ -46,6 +52,11 @@
 
 .beer-reveal>img:first-child {
     height: auto
+}
+
+.beer-reveal>img {
+    height: 100% !important;
+    width: auto !important;
 }
 
 .beer-range {

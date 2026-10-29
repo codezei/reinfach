@@ -1,47 +1,99 @@
-section.promo#promo.section.section-secondary.section-full-height(data-nav="promo")
-    //- .fade-out-on-scroll
-    //- .promo__content
 
+section.promo#promo.section.section-secondary.section-full-height(data-nav="promo")
     .container.section__body.custom-container
         .promo-grid
             .promo-grid__header
-                .row
-                    svg(viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="48" height="48")
-                        path(d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4")
-                        path(d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853")
-                        path(d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05")
-                        path(d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335")
-                    div
-                        div.rating(style="--star-rating: 5;")
+                .card
+                    .card__header
+                        svg(width="48" height="48" aria-hidden="true")
+                            use(href="#google")
                         div
-                            a.text-link.text-small(href=google target="_blank" rel="noopener noreferrer") 5,0 ★ Bewertungen auf Google Maps&nbsp;↗
-                h1.promo__title.title #[span.text-accent Professionelle Polsterreinigung] in Würzburg vor Ort
-                p.promo__subtitle.subtitle.subtitle-extractor-left.h5 Fasertiefe Reinheit für Ihr Sofa (Couch), Matratzen, Teppiche und Autositze direkt bei Ihnen zu Hause.
-            .promo-grid__body
+                            .card__rating.rating(style="--star-rating: 5;" aria-hidden="true")
+                            a.card__link.text-link(href=google target="_blank" rel="noopener noreferrer") 5,0 ★ Bewertungen auf Google Maps&nbsp;↗
 
-                .categories
-                    .swiper.categories-navigation-swiper
-                        .swiper-wrapper
-                            .swiper-slide.h-auto
-                                button.category(type="button")
-                                    //- img.category__icon(src="img/process/main-sofa-after.png", alt="", width="70")
-                                    span.btn-text 1.&nbsp;Sofas&nbsp;& <br>Sessel
-                            .swiper-slide.h-auto
-                                button.category(type="button")
-                                    //- img.category__icon(src="img/process/mattress-2-after.png", alt="", width="70")
-                                    span.btn-text 2.&nbsp;Matratzen&nbsp;& <br>Topper
-                            .swiper-slide.h-auto
-                                button.category(type="button")
-                                    //- img.category__icon(src="img/process/salon-2-after.png", alt="", width="70")
-                                    span.btn-text 3.&nbsp;Autositze&nbsp;& <br>Innenräume
-                .swiper.categories-content-swiper.scene(data-disallow-touch="true")
-                    .swiper-wrapper
-                        .swiper-slide
-                            +slider("main-sofa", "", "")(fetchpriority="high")
-                        .swiper-slide
-                            +slider("mattress-2", "", "")(fetchpriority="high")
-                        .swiper-slide
-                            +slider("salon-2", "", "")(fetchpriority="high")
-            .promo-grid__footer
-                .promo__buttons
-                    +btn('Foto senden & Festpreis erhalten')(class="btn-primary btn-large w-100")
+                h1.promo__title.title #[span.text-accent Professionelle Polsterreinigung] in Würzburg vor Ort
+
+                .custom-cta.promo__custom-cta
+                    p.custom-cta__subtitle.h4 Fasertiefe Reinheit für Ihr Sofa (Couch), Matratzen, Teppiche und Autositze – direkt bei Ihnen zu Hause (0 € Anfahrt in Würzburg).
+                    img.custom-cta__img(
+                        src="img/master.webp"
+                        alt="ReinFach Fachmann für mobile Polsterreinigung in Würzburg"
+                        width="200"
+                        height="300"
+                        fetchpriority="high"
+                    )
+                    .custom-cta__row
+                        a.custom-cta__btn.btn.btn-primary.btn-large(
+                            href=whatsappLink
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        )
+                            span.btn-icon.pulse(aria-hidden="true")
+                                svg(width="24" height="24")
+                                    use(href="#whatsapp")
+                            span.btn-text Foto senden & Preis erhalten
+
+
+            .promo-grid__body
+                .tabs(data-tabs)
+                    .tabs__nav(role="tablist" aria-label="Vorher-Nachher Beispiele")
+                        button.tabs__btn.is-active#tab-sofas(
+                            type="button"
+                            role="tab"
+                            aria-selected="true"
+                            aria-controls="pane-sofas"
+                            data-tabs-target="sofas"
+                        ) Sofas & Couches
+
+                        button.tabs__btn#tab-matratzen(
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="pane-matratzen"
+                            data-tabs-target="matratzen"
+                        ) Matratzen
+
+                        button.tabs__btn#tab-autositze(
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="pane-autositze"
+                            data-tabs-target="autositze"
+                        ) Autositze
+
+                    .tabs__body
+                        .tabs__pane.is-active#pane-sofas(
+                            role="tabpanel"
+                            aria-labelledby="tab-sofas"
+                            data-tabs-pane="sofas"
+                        )
+                            +ba-slider({
+                                before: 'img/process/sofa-before.webp',
+                                after: 'img/process/sofa-after.webp',
+                                altBefore: 'Stark verschmutztes Sofa vor der Polsterreinigung in Würzburg',
+                                altAfter: 'Sauberes Sofa nach der fasertiefen Polsterreinigung vor Ort'
+                            })
+
+                        .tabs__pane#pane-matratzen(
+                            role="tabpanel"
+                            aria-labelledby="tab-matratzen"
+                            data-tabs-pane="matratzen"
+                        )
+                            +ba-slider({
+                                before: 'img/process/mattress-before.webp',
+                                after: 'img/process/mattress-after.webp',
+                                altBefore: 'Matratze mit Flecken vor der Matratzenreinigung',
+                                altAfter: 'Hygienisch reine Matratze nach der Tiefenreinigung'
+                            })
+
+                        .tabs__pane#pane-autositze(
+                            role="tabpanel"
+                            aria-labelledby="tab-autositze"
+                            data-tabs-pane="autositze"
+                        )
+                            +ba-slider({
+                                before: 'img/process/salon-before.webp',
+                                after: 'img/process/salon-after.webp',
+                                altBefore: 'Autositz mit Flecken vor der Auto-Innenreinigung',
+                                altAfter: 'Sauberer Autositz nach der Polsteraufbereitung'
+                            })

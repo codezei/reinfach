@@ -5,7 +5,7 @@ section#how.how.section.section-secondary
                 .pre-title.section__header-pre-title Ablauf & Buchung
                 h2.title.section__header-title #[span.text-accent In 4 einfachen Schritten] zu&nbsp;sauberen Polstern
             .section__header-col
-                p.subtitle.subtitle-extractor-right.h5.section__header-subtitle Von der schnellen Foto-Anfrage per WhatsApp bis zur fasertiefen Reinigung bei Ihnen zu Hause in Würzburg – komplett stressfrei, pünktlich und mit verbindlicher Festpreisgarantie.
+                p.subtitle.subtitle-extractor-right.section__header-subtitle Von der schnellen Foto-Anfrage per WhatsApp bis zur fasertiefen Reinigung bei Ihnen zu Hause in Würzburg – komplett stressfrei, pünktlich und mit verbindlicher Festpreisgarantie.
         .section__body
             .row.row-cols-md-2.row-cols-xl-4
                 .col
@@ -55,4 +55,9 @@ section#how.how.section.section-secondary
                     strong Bereit für Schritt 01?
                     |  Antwortzeit per WhatsApp in der Regel unter #[span.text-accent 15 Minuten].
                 div
-                    +btn('Jetzt Foto per WhatsApp senden')(class="btn-primary btn-normal")
+                    .btn-row
+                        +btn('Jetzt Foto per WhatsApp senden')(class="btn-primary btn-normal magnet-btn flex-grow-1")
+                        a.btn.btn-normal.btn-white.magnet-btn.flex-shrink-0(href=`tel:${phoneNumber}`)
+                            span.btn-icon
+                                svg(width="24" height="24")
+                                    use(href="#tel")

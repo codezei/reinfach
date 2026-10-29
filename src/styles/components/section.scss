@@ -58,6 +58,11 @@
         --section-text: var(--color-1-shade-3);
         --section-accent: var(--color-1-base);
     }
+    &-transparent {
+        --section-bg: transparent;
+        --section-text: var(--color-1-shade-3);
+        --section-accent: var(--color-1-base);
+    }
 
     &-white {
         --section-bg: #fff;
@@ -171,20 +176,36 @@
 }
 
 .brand-container {
-    @media screen and (min-width: 576px) {
-            position: relative;
+    @media screen and (min-width: 1500px) {
+        position: relative;
 
-                &:before {
-                    content: "Rein Fach";
-                    position: absolute;
-                    bottom: calc(var(--padding-bottom) * -1.1);
-                    left: 5%;
-                    font-size: calc(var(--padding-bottom) * 1.5);
-                    color: color-mix(in srgb, currentColor 10%, transparent);
-                    font-weight: 900;
-                    // font-family: 'Unbounded';
-                    line-height: 1;
-                }
+        // Загальні стилі для обох декоративних написів
+        &:before,
+        &:after {
+            content: "Rein Fach";
+            white-space: nowrap;
+            position: absolute;
+            font-size: calc(var(--padding-bottom) * 1.5); // Можете змінити під ваш розмір
+            color: color-mix(in srgb, currentColor 10%, transparent);
+            font-weight: 900;
+            line-height: 1;
+            writing-mode: vertical-lr; // Робить текст вертикальним (зверху вниз)
+            // text-orientation: upright; // Якщо букви мають стояти прямо, а не повертатися
+            pointer-events: none; // Щоб текст ніяк не перекривав кліки по елементах
+        }
+
+        // 1. BEFORE: Зліва і вгорі
+        &:before {
+            top: 0;
+            left: -180px; // Винесіть за межі контейнера на потрібну відстань (або підлаштуйте під себе)
+            transform: rotate(180deg); // За бажанням: можна розгорнути текст знизу-вгору, якщо потрібно
+        }
+
+        // 2. AFTER: Справа і знизу
+        &:after {
+            bottom: 0;
+            right: -180px; // Винесіть за межі контейнера праворуч
+        }
     }
 }
 

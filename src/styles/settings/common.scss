@@ -6,9 +6,13 @@
     --h5: 1.125rem;
     --h6: 1rem;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 576px) {
         --h1: 2rem;
         --h2: 1.75rem;
+    }
+    @media screen and (min-width: 768px) {
+        --h1: 2.5rem;
+        --h2: 2rem;
         --h3: 1.5rem;
     }
 
@@ -25,6 +29,7 @@
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 html {
@@ -61,6 +66,7 @@ body {
         // Забороняє iOS штучно "розмазувати" жирність і курсив, якщо не вистачає файлу шрифту
         font-synthesis: none;
         font-feature-settings: "kern" 1, "liga" 1;
+        -webkit-tap-highlight-color: transparent;
 
     @media screen and (min-width: 1200px) {
         font-size: 18px;

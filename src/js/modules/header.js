@@ -1,4 +1,4 @@
-export default function header() {
+export default function () {
     const header = document.querySelector('.header');
     const burger = document.querySelector('.js-burger');
     if (!header || !burger) return;

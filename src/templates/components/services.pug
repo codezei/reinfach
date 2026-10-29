@@ -1,7 +1,7 @@
 section.services#services.section.section-white.section-wave(data-nav="services")
-    svg.section-wave__top()
+    svg.section-wave__top(aria-hidden="true")
         use(href="#wave-top")
-    svg.section-wave__bottom()
+    svg.section-wave__bottom(aria-hidden="true")
         use(href="#wave-bottom")
     .container
         .section__header
@@ -9,53 +9,111 @@ section.services#services.section.section-white.section-wave(data-nav="services"
                 .pre-title.section__header-pre-title Was wir reinigen
                 h2.title.section__header-title #[span.text-accent Polster-, Matratzen- & Autoreinigung] in Würzburg
             .section__header-col
-                p.subtitle.subtitle-extractor-right.h5.section__header-subtitle Fasertiefe Sauberkeit und Hygiene – <br>wir kommen mit Profi-Equipment direkt zu Ihnen nach Hause.
-        .row.row-cols-lg-3
-            .col
-                .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
-                    .card__img
-                        img(src="img/service-furniture.jpg" alt="")
-                        svg.wave.wave-bottom
-                            use(href="#wave-top")
-                        h3.h4.card__title.m-0 Polster- <br>& Sofareinigung
-                    .card__body
-                        p.card__text Wir entfernen tiefsitzenden Schmutz, hartnäckige Flecken und unangenehme Gerüche schonend aus allen Stoffarten. Ihre Lieblingsmöbel sehen wieder aus wie neu.
-                        ul.card__list.list-check.list
-                            li Sofas, Couches, Ecksofas, Sessel & Stüh
-                            li Entfernung von Kaffee-, Wein-, Fett- & Tierflecken
-                            li Farbauffrischung & Geruchsneutralisation
-                            li Schonend für die Fasern, schnelle Trocknung
-                    .card__footer
-                        +btn("Polster reinigen lassen")(class="btn-primary magnet-btn btn-normal")
-            .col
-                .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
-                    .card__img
-                        img(src="img/service-mattress.jpg" alt="")
-                        svg.wave.wave-bottom
-                            use(href="#wave-top")
-                        h3.h4.card__title.m-0 Matratzen- <br>& Topperreinigung
-                    .card__body
-                        p.card__text Für einen gesunden und erholsamen Schlaf. Wir befreien Ihre Matratzen fasertief von Hausstaubmilben, Bakterien, Schweiß und unschönen Flecken – ganz ohne aggressive Chemie.
-                        ul.card__list.list-check.list
-                            li Einzel-, Doppelmatratzen, Topper & Boxspringbetten
-                            li Ideal für Allergiker (99% Milbenentfernung)
-                            li Umweltfreundliche & sichere Reinigungsmittel
-                            li Hygienische Frische ohne Chemiegeruch
-                    .card__footer
-                        +btn("Matratze reinigen lassen")(class="btn-primary magnet-btn btn-normal")
-            .col
-                .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
-                    .card__img
-                        img(src="img/service-salon.jpg" alt="")
-                        svg.wave.wave-bottom
-                            use(href="#wave-top")
-                        h3.h4.card__title.m-0 Auto-<br>Innenreinigung
-                    .card__body
-                        p.card__text Holen Sie sich das Neuwagen-Gefühl zurück. Wir reinigen Ihre Autositze und Teppiche gründlich von Alltagsflecken, Staub, Tierhaaren und Gerüchen direkt bei Ihnen vor Ort.
-                        ul.card__list.list-check.list
-                            li Vordersitze, Rücksitz, Fahrzeugboden & Kofferraum
-                            li Gegen Wasserflecken, Salzränder & Nikotingeruch
-                            li Ideal vor dem Verkauf oder der Leasingrückgabe
-                            li Bequem bei Ihnen vor Ort
-                    .card__footer
-                        +btn("Autositze reinigen lassen")(class="btn-primary magnet-btn btn-normal")
+                p.subtitle.subtitle-extractor-right.section__header-subtitle Fasertiefe Sauberkeit und Hygiene – <br>wir kommen mit Profi-Equipment direkt zu Ihnen nach Hause.
+        .section__body
+            .swiper.services-swiper.swiper-overflow-visible
+                .swiper-wrapper
+                    .swiper-slide.h-auto
+                        .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
+                            .card__img
+                                img(
+                                    src="img/service-1.webp"
+                                    alt="Professionelle Polster- und Sofareinigung in Würzburg vor Ort"
+                                    loading="lazy"
+                                    width="400"
+                                    height="260"
+                                )
+                                svg.wave.wave-bottom(aria-hidden="true")
+                                    use(href="#wave-top")
+                                h3.h4.card__title.m-0 Polster-, Sofa- <br>& Couchreinigung
+                            .card__body
+                                p.card__text Wir entfernen tiefsitzenden Schmutz, hartnäckige Flecken und unangenehme Gerüche schonend aus allen Stoffarten. Ihre Lieblingsmöbel sehen wieder aus wie neu.
+                                ul.card__list.list-check.list
+                                    li Sofas, Couches, Ecksofas, Sessel & Stühle
+                                    li Entfernung von Kaffee-, Wein-, Fett- & Tierflecken
+                                    li Farbauffrischung & Geruchsneutralisation
+                                    li Schonend für die Fasern, schnelle Trocknung
+                            .card__footer.btn-row
+                                +btn("Polster reinigen lassen")(class="btn-primary magnet-btn btn-normal flex-grow-1")
+                                a.btn.btn-normal.btn-white.magnet-btn.flex-shrink-0(
+                                    href=`tel:${phoneNumber}`
+                                    aria-label="Jetzt für Polsterreinigung anrufen"
+                                )
+                                    span.btn-icon(aria-hidden="true")
+                                        svg(width="24" height="24")
+                                            use(href="#tel")
+                    .swiper-slide.h-auto
+                        .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
+                            .card__img
+                                img(
+                                    src="img/service-2.webp"
+                                    alt="Hygienische Matratzenreinigung und Milbenentfernung in Würzburg"
+                                    loading="lazy"
+                                    width="400"
+                                    height="260"
+                                )
+                                svg.wave.wave-bottom(aria-hidden="true")
+                                    use(href="#wave-top")
+                                h3.h4.card__title.m-0 Matratzen- <br>& Topperreinigung
+                            .card__body
+                                p.card__text Für einen gesunden und erholsamen Schlaf. Wir befreien Ihre Matratzen fasertief von Hausstaubmilben, Bakterien, Schweiß und unschönen Flecken – ganz ohne aggressive Chemie.
+                                ul.card__list.list-check.list
+                                    li Einzel-, Doppelmatratzen, Topper & Boxspringbetten
+                                    li Ideal für Allergiker (99 % Milbenentfernung)
+                                    li Umweltfreundliche & sichere Reinigungsmittel
+                                    li Hygienische Frische ohne Chemiegeruch
+                            .card__footer.btn-row
+                                +btn("Matratze reinigen lassen")(class="btn-primary magnet-btn btn-normal flex-grow-1")
+                                a.btn.btn-normal.btn-white.magnet-btn.flex-shrink-0(
+                                    href=`tel:${phoneNumber}`
+                                    aria-label="Jetzt für Matratzenreinigung anrufen"
+                                )
+                                    span.btn-icon(aria-hidden="true")
+                                        svg(width="24" height="24")
+                                            use(href="#tel")
+                    .swiper-slide.h-auto
+                        .card.card-white.card-large.h-100.card-grid.card-rounded.card-shadow
+                            .card__img
+                                img(
+                                    src="img/service-3.webp"
+                                    alt="Mobile Auto-Innenreinigung und Autositze reinigen in Würzburg"
+                                    loading="lazy"
+                                    width="400"
+                                    height="260"
+                                )
+                                svg.wave.wave-bottom(aria-hidden="true")
+                                    use(href="#wave-top")
+                                h3.h4.card__title.m-0 Auto-<br>Innenreinigung
+                            .card__body
+                                p.card__text Holen Sie sich das Neuwagen-Gefühl zurück. Wir reinigen Ihre Autositze und Teppiche gründlich von Alltagsflecken, Staub, Tierhaaren und Gerüchen direkt bei Ihnen vor Ort.
+                                ul.card__list.list-check.list
+                                    li Vordersitze, Rücksitz, Fahrzeugboden & Kofferraum
+                                    li Gegen Wasserflecken, Salzränder & Nikotingeruch
+                                    li Ideal vor dem Verkauf oder der Leasingrückgabe
+                                    li Mobile Polsteraufbereitung direkt bei Ihnen vor Ort
+                            .card__footer.btn-row
+                                +btn("Autositze reinigen lassen")(class="btn-primary magnet-btn btn-normal flex-grow-1")
+                                a.btn.btn-normal.btn-white.magnet-btn.flex-shrink-0(
+                                    href=`tel:${phoneNumber}`
+                                    aria-label="Jetzt für Auto-Innenreinigung anrufen"
+                                )
+                                    span.btn-icon(aria-hidden="true")
+                                        svg(width="24" height="24")
+                                            use(href="#tel")
+        .section__footer
+            .swiper-navigation
+                button.btn.btn-secondary.btn-normal.btn-shadow.services-navigation-button-prev(
+                    type="button"
+                    aria-label="Vorherige Leistung"
+                )
+                    span.btn-icon(aria-hidden="true")
+                        svg(width="16" height="16")
+                            use(href="#chevron-left")
+                .swiper-pagination.services-pagination.swiper-pagination-static.w-auto
+                button.btn.btn-secondary.btn-normal.btn-shadow.services-navigation-button-next(
+                    type="button"
+                    aria-label="Nächste Leistung"
+                )
+                    span.btn-icon(aria-hidden="true")
+                        svg(width="16" height="16")
+                            use(href="#chevron-right")

@@ -12,4 +12,9 @@ section.faq#faq.section.section-white.section-wave(data-nav="faq")
             each faq, i in faqData
                 +faqItem(faq.question, faq.answer)
         .default-grid__footer
-            +btn("Frage per WhatsApp stellen")(class="btn-primary btn-normal magnet-btn")
+            .btn-row
+                +btn("Frage per WhatsApp stellen")(class="btn-primary btn-normal magnet-btn flex-grow-1")
+                a.btn.btn-normal.btn-white.magnet-btn.flex-shrink-0(href=`tel:${phoneNumber}`)
+                    span.btn-icon
+                        svg(width="24" height="24")
+                            use(href="#tel")

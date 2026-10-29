@@ -1,0 +1,102 @@
+.ba-slider {
+    --pos: 50%;
+    position: relative;
+    width: 100%;
+    // max-width: 600px;
+    aspect-ratio: 600 / 350;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    cursor: ew-resize;
+    margin-left: auto;
+    margin-right: auto;
+    touch-action: pan-y; // Дозволяє вертикальний скрол сторінки, але віддає горизонтальний жест у JS
+
+    &:focus-visible {
+        outline: 2px solid #3b66f5;
+        outline-offset: 4px;
+        border-radius: 8px;
+    }
+
+    &__after,
+    &__before {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    &__before {
+        z-index: 2;
+        clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+        will-change: clip-path;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        -webkit-user-drag: none;
+        pointer-events: none;
+    }
+
+    &__label {
+        position: absolute;
+        bottom: 0;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #fff;
+
+        // backdrop-filter: blur(4px);
+
+        &--before {
+            left: 0;
+            background: rgba(180, 185, 195, 0.7);
+            border-radius: 0 0.5rem 0rem 0;
+        }
+
+        &--after {
+            right: 0;
+            background: var(--section-accent);
+            border-radius: 0.5rem 0 0 0rem;
+        }
+    }
+
+    &__divider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: var(--pos);
+        z-index: 3;
+        width: 2px;
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateX(-50%);
+        pointer-events: none;
+        will-change: left;
+    }
+
+    &__handle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        width: 44px;
+        height: 44px;
+        background-color: #fff;
+        color: #1e293b;
+        border-radius: 50%;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        transition: transform 0.15s ease;
+    }
+
+    &.is-dragging &__handle {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}

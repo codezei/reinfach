@@ -1,0 +1,38 @@
+-
+    const serviceAreas = [
+        "Höchberg",
+        "Veitshöchheim",
+        "Gerbrunn",
+        "Rottendorf",
+        "Estenfeld",
+        "Randersacker",
+        "Waldbüttelbrunn",
+        "Rimpar",
+        "Ochsenfurt",
+        "Kitzingen",
+        "Karlstadt",
+        "Marktheidenfeld",
+        "Erlenbach"
+    ]
+section#locations.locations.section.section-secondary
+    .container.default-grid.custom-container
+        .default-grid__header
+            .pre-title Regionale Verfügbarkeit
+            h2.title Wir sind in Würzburg und dem gesamten Umkreis für Sie da
+            p.subtitle Kعnnen wir auch zu Ihnen kommen? Entdecken Sie unsere Anfahrtszonen im Umkreis.
+        .default-grid__body
+            .row.row-cols-sm-2
+                each city in serviceAreas
+                    .col
+                        .card.card-white.card-normal.card-rounded.card-shadow
+                            .card__header
+                                svg(width="24", height="24")
+                                    use(href="#geo")
+                                h3.h6.card__title.m-0= city
+        .default-grid__footer
+            .btn-row
+                +btn("Frage per WhatsApp stellen")(class="btn-primary btn-normal magnet-btn flex-grow-1")
+                a.btn.btn-normal.btn-white.magnet-btn.flex-shrink-0(href=`tel:${phoneNumber}`)
+                    span.btn-icon
+                        svg(width="24" height="24")
+                            use(href="#tel")

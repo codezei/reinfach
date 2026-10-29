@@ -3,14 +3,14 @@ section.price#price.section.section-secondary(data-nav="price")
         .section__header
             .section__header-col
                 .pre-title.section__header-pre-title Transparente Preise
-                h2.title.section__header-title #[span.text-accent Faire Festpreise] für Ihre Polsterreinigung
+                h2.title.section__header-title #[span.text-accent Faire Festpreise] für Ihre Polsterreinigung in Würzburg
             .section__header-col
-                p.subtitle.subtitle-extractor-right.h5.section__header-subtitle Keine Überraschungen vor Ort: Alle Preise verstehen sich inklusive 0 € Anfahrt in Würzburg. Senden Sie uns einfach ein Foto per WhatsApp für Ihr verbindliches Festpreis-Angebot.
+                p.subtitle.subtitle-extractor-right.section__header-subtitle Keine Überraschungen vor Ort: Alle Preise verstehen sich inklusive 0 € Anfahrt in Würzburg. Senden Sie uns einfach ein Foto per WhatsApp für Ihr verbindliches Festpreis-Angebot.
         .section__body
             .card.card-white.card-rounded.card-shadow.card-normal
-                .row.row-cols-xl-3
+                .row.row-cols-lg-2.row-cols-xl-3
                     each category in priceData
                         +priceItem(category)
-        .section__footer
-            p.text-small * Alle Preise sind Endpreise inkl. 0 € Anfahrt in Würzburg. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.
-            p.text-small * Warum „ab“-Preise? Der genaue Festpreis richtet sich nach Größe und Verschmutzungsgrad – und wird Ihnen nach einem kurzen Foto per WhatsApp vorab zu 100 % verbindlich garantiert.
+        .section__footer.text-center.mt-4
+            p.text-small.text-muted.mb-2 * Alle Preise sind Endpreise inkl. 0 € Anfahrt in Würzburg. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.
+            p.text-small.text-muted Warum „ab“-Preise? Der genaue Festpreis richtet sich nach Größe und Verschmutzungsgrad – und wird Ihnen nach einem kurzen Foto per WhatsApp vorab zu 100 % verbindlich garantiert.

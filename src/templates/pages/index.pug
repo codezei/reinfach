@@ -12,6 +12,7 @@ prepend head
     - const pageImage = "https://reinfach.de/img/og-image.jpg";
     - const twitterImage = "https://reinfach.de/img/og-image.jpg";
     - const phoneNumber = '+4915209655835';
+    - const whatsappLink = '+4915209655835';
     - const telegramNick = '';
     - const email = 'reinfach.service@gmail.com';
     - const google = 'https://www.google.com/maps/place//@49.8169894,9.633954,17z/data=!3m1!4b1!4m3!3m2!1s0xa47e21315a994f81:0x3d2c936585698b85!12e1?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D';
@@ -35,7 +36,7 @@ append content
                 path#blob-path(d="M0.5,0.075 C0.75,0.05 0.925,0.225 0.925,0.5 C0.925,0.725 0.775,0.925 0.5,0.95 C0.225,0.975 0.05,0.75 0.075,0.5 C0.1,0.25 0.225,0.1 0.5,0.075 Z")
     .cursor-glow
     //- include ../mixins/portfolioItem
-    include ../mixins/slider
+    include ../mixins/ba-slider
     include ../mixins/faqItem
     include ../mixins/videoItem
     include ../mixins/btn
@@ -57,6 +58,7 @@ append content
         //- include ../components/portfolio
         //- include ../components/how
         include ../components/faq
+        include ../components/locations
         include ../components/contacts
         include ../components/icons
         //- include ../components/privacy
