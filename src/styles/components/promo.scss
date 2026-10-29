@@ -53,6 +53,7 @@
 
     &__custom-cta {
         margin-bottom: 2rem;
+
     }
 
 
@@ -143,6 +144,7 @@
     &__subtitle {
 
         margin-bottom: 2rem;
+        margin-top: 0;
 
     }
 
@@ -159,6 +161,10 @@
         gap: 0.5rem;
     }
 
+    &__btn {
+        width: 100%;
+    }
+
     @media screen and (min-width: 430px) {
         --btn-img-width: 120px;
         &__img {
@@ -172,6 +178,7 @@
 
         &__btn {
             padding-right: calc(var(--btn-img-width) - 2rem);
+            width: auto;
 
         }
 
