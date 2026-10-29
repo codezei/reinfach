@@ -7,7 +7,7 @@ mixin priceItem(category)
                     tr.price-table__row
                         td.w-100
                             .price-table__name
-                                img(src=`img/${item.icon}`, alt="", width="100")
+                                img(src=`img/${item.icon}` alt="" width="100" height="66" loading="lazy")
                                 p= item.name
                         td
                             .price-table__value.text-accent ab #[span.h3.text-bold= item.price]&nbsp;€
@@ -18,8 +18,3 @@ mixin priceItem(category)
                     span.btn-icon
                         svg(width="24" height="24")
                             use(href="#tel")
-        //- .card__footer
-        //-     svg.wave.wave-bottom
-        //-         use(href="#wave-top")
-        //-     br
-        //-

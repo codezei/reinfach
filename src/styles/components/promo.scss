@@ -158,12 +158,12 @@
     &__row {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
-    &__btn {
-        width: 100%;
-    }
+    // &__btn {
+    //     width: 100%;
+    // }
 
     @media screen and (min-width: 430px) {
         --btn-img-width: 120px;
@@ -176,9 +176,13 @@
             display: block;
         }
 
+        &__row {
+            flex-direction: row-reverse;
+        }
+
         &__btn {
             padding-right: calc(var(--btn-img-width) - 2rem);
-            width: auto;
+            // width: auto;
 
         }
 

@@ -22,15 +22,20 @@ section.promo#promo.section.section-secondary.section-full-height(data-nav="prom
                         height="300"
                         fetchpriority="high"
                     )
-                    a.custom-cta__btn.btn.btn-primary.btn-large(
-                        href=whatsappLink
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    )
-                        span.btn-icon.pulse(aria-hidden="true")
-                            svg(width="24" height="24")
-                                use(href="#whatsapp")
-                        span.btn-text Foto senden & Preis erhalten
+                    .custom-cta__row
+                        a.custom-cta__btn.btn.btn-primary.btn-large.btn-shadow(
+                            href=whatsappLink
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        )
+                            span.btn-icon.pulse(aria-hidden="true")
+                                svg(width="24" height="24")
+                                    use(href="#whatsapp")
+                            span.btn-text Foto senden & Preis erhalten
+                        a.custom-cta__tel.btn.btn-white.btn-large.magnet-btn.flex-shrink-0.btn-shadow(`tel:${phoneNumber}`)
+                            span.btn-icon(aria-hidden="true")
+                                svg(width="24" height="24")
+                                    use(href="#tel")
 
 
             .promo-grid__body
@@ -83,7 +88,7 @@ section.promo#promo.section.section-secondary.section-full-height(data-nav="prom
                                 after: 'img/process/mattress-after.webp',
                                 altBefore: 'Matratze mit Flecken vor der Matratzenreinigung',
                                 altAfter: 'Hygienisch reine Matratze nach der Tiefenreinigung'
-                            })
+                            })(loading="lazy")
 
                         .tabs__pane#pane-autositze(
                             role="tabpanel"
@@ -95,4 +100,4 @@ section.promo#promo.section.section-secondary.section-full-height(data-nav="prom
                                 after: 'img/process/salon-after.webp',
                                 altBefore: 'Autositz mit Flecken vor der Auto-Innenreinigung',
                                 altAfter: 'Sauberer Autositz nach der Polsteraufbereitung'
-                            })
+                            })(loading="lazy")

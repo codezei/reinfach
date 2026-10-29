@@ -72,7 +72,7 @@
   <header class="header section section-white">
     <div class="header__inner">
       <div class="header__logo">
-        <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide.webp" alt="" width="170"></div>
+        <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide.webp" alt="ReinFach" width="200" height="80"></div>
       </div>
       <div class="header__menu" id="main-menu">
         <nav class="menu menu-row" aria-label="Hauptnavigation"><a class="menu__item" href="#services" data-tilt data-link="services">Leistungen</a><a class="menu__item" href="#price" data-tilt data-link="price">Preise</a><a class="menu__item" href="#works" data-tilt data-link="works">Vorher / Nachher</a><a class="menu__item" href="#reviews" data-tilt data-link="reviews">Bewertungen</a><a class="menu__item" href="#contacts" data-tilt data-link="contacts">Kontakt</a></nav>
@@ -83,7 +83,7 @@
       <div class="header__burger"><button class="js-burger btn btn-clear btn-flush" id="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-widget"><span class="sr-only">Menü öffnen</span><span class="cross" aria-hidden="true"><span></span><span></span><span></span></span></button></div>
       <div class="header__widget widget" id="mobile-widget">
         <div class="widget__header">
-          <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide.webp" alt="" width="170"></div>
+          <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide.webp" alt="ReinFach" width="200" height="80"></div>
         </div>
         <div class="widget__body">
           <nav class="menu menu-column widget__menu" aria-label="Mobile Navigation"><a class="menu__item" href="#services" data-link="services">Leistungen</a><a class="menu__item" href="#price" data-link="price">Preise</a><a class="menu__item" href="#works" data-link="works">Vorher / Nachher</a><a class="menu__item" href="#reviews" data-link="reviews">Bewertungen</a><a class="menu__item" href="#contacts" data-link="contacts">Kontakt</a></nav>
@@ -110,7 +110,8 @@
             </div>
             <h1 class="promo__title title"><span class="text-accent">Professionelle Polsterreinigung</span> in Würzburg vor Ort</h1>
             <div class="custom-cta promo__custom-cta">
-              <p class="custom-cta__subtitle h4">Fasertiefe Reinheit für Ihr Sofa (Couch), Matratzen, Teppiche und Autositze – direkt bei Ihnen zu Hause (0 € Anfahrt in Würzburg).</p><img class="custom-cta__img" src="img/master.webp" alt="ReinFach Fachmann für mobile Polsterreinigung in Würzburg" width="200" height="300" fetchpriority="high"><a class="custom-cta__btn btn btn-primary btn-large" href="+4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-icon pulse" aria-hidden="true"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span><span class="btn-text">Foto senden & Preis erhalten</span></a>
+              <p class="custom-cta__subtitle h4">Fasertiefe Reinheit für Ihr Sofa (Couch), Matratzen, Teppiche und Autositze – direkt bei Ihnen zu Hause (0 € Anfahrt in Würzburg).</p><img class="custom-cta__img" src="img/master.webp" alt="ReinFach Fachmann für mobile Polsterreinigung in Würzburg" width="200" height="300" fetchpriority="high">
+              <div class="custom-cta__row"><a class="custom-cta__btn btn btn-primary btn-large btn-shadow" href="+4915209655835" target="_blank" rel="noopener noreferrer"><span class="btn-icon pulse" aria-hidden="true"><svg width="24" height="24"><use href="#whatsapp"></use></svg></span><span class="btn-text">Foto senden & Preis erhalten</span></a><a class="custom-cta__tel btn btn-white btn-large magnet-btn flex-shrink-0 btn-shadow" `tel:${phoneNumber}`><span class="btn-icon" aria-hidden="true"><svg width="24" height="24"><use href="#tel"></use></svg></span></a></div>
             </div>
           </div>
           <div class="promo-grid__body">
@@ -132,8 +133,8 @@
                 </div>
                 <div class="tabs__pane" id="pane-matratzen" role="tabpanel" aria-labelledby="tab-matratzen" data-tabs-pane="matratzen">
                   <div class="ba-slider" data-ba-slider style="--pos: 50%" role="slider" tabindex="0" aria-label="Vergleich Vorher und Nachher" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="ba-slider__label ba-slider__label--after">Nachher →</span><span class="ba-slider__label ba-slider__label--before">← Vorher</span>
-                    <div class="ba-slider__after"><img class="ba-slider__img" src="img/process/mattress-after.webp" alt="" decoding="async" draggable="false"></div>
-                    <div class="ba-slider__before"><img class="ba-slider__img" src="img/process/mattress-before.webp" alt="" decoding="async" draggable="false"></div>
+                    <div class="ba-slider__after"><img class="ba-slider__img" src="img/process/mattress-after.webp" alt="" decoding="async" draggable="false" loading="lazy"></div>
+                    <div class="ba-slider__before"><img class="ba-slider__img" src="img/process/mattress-before.webp" alt="" decoding="async" draggable="false" loading="lazy"></div>
                     <div class="ba-slider__divider" aria-hidden="true">
                       <div class="ba-slider__handle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <polyline points="15 18 9 12 15 6"></polyline>
@@ -145,8 +146,8 @@
                 </div>
                 <div class="tabs__pane" id="pane-autositze" role="tabpanel" aria-labelledby="tab-autositze" data-tabs-pane="autositze">
                   <div class="ba-slider" data-ba-slider style="--pos: 50%" role="slider" tabindex="0" aria-label="Vergleich Vorher und Nachher" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="ba-slider__label ba-slider__label--after">Nachher →</span><span class="ba-slider__label ba-slider__label--before">← Vorher</span>
-                    <div class="ba-slider__after"><img class="ba-slider__img" src="img/process/salon-after.webp" alt="" decoding="async" draggable="false"></div>
-                    <div class="ba-slider__before"><img class="ba-slider__img" src="img/process/salon-before.webp" alt="" decoding="async" draggable="false"></div>
+                    <div class="ba-slider__after"><img class="ba-slider__img" src="img/process/salon-after.webp" alt="" decoding="async" draggable="false" loading="lazy"></div>
+                    <div class="ba-slider__before"><img class="ba-slider__img" src="img/process/salon-before.webp" alt="" decoding="async" draggable="false" loading="lazy"></div>
                     <div class="ba-slider__divider" aria-hidden="true">
                       <div class="ba-slider__handle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <polyline points="15 18 9 12 15 6"></polyline>
@@ -267,7 +268,7 @@
                   <table class="price-table">
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-stuhl.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-stuhl.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Stuhl</p>
                         </div>
                       </td>
@@ -277,7 +278,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-sessel.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-sessel.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Sessel</p>
                         </div>
                       </td>
@@ -287,7 +288,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-sofa.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-sofa.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Sofa (2 Sitze)</p>
                         </div>
                       </td>
@@ -297,7 +298,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-ecksofa.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-ecksofa.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Ecksofa</p>
                         </div>
                       </td>
@@ -307,7 +308,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-u-sofa.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-u-sofa.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Großes U-Sofa</p>
                         </div>
                       </td>
@@ -327,7 +328,7 @@
                   <table class="price-table">
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-einzelmatratze.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-einzelmatratze.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Einzelmatratze</p>
                         </div>
                       </td>
@@ -337,7 +338,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-doppelmatratze.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-doppelmatratze.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Doppelmatratze</p>
                         </div>
                       </td>
@@ -357,7 +358,7 @@
                   <table class="price-table">
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-vordersitze.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-vordersitze.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Vordersitze</p>
                         </div>
                       </td>
@@ -367,7 +368,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-ruecksitz.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-ruecksitz.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Rücksitz</p>
                         </div>
                       </td>
@@ -377,7 +378,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-fahrzeugboden.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-fahrzeugboden.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Fahrzeugboden</p>
                         </div>
                       </td>
@@ -387,7 +388,7 @@
                     </tr>
                     <tr class="price-table__row">
                       <td class="w-100">
-                        <div class="price-table__name"><img src="img/price-kofferraum.webp" alt="" width="100">
+                        <div class="price-table__name"><img src="img/price-kofferraum.webp" alt="" width="100" height="66" loading="lazy">
                           <p>Kofferraum</p>
                         </div>
                       </td>
@@ -1121,7 +1122,7 @@
       <div class="row row-cols-md-2 row-cols-lg-3">
         <div class="col">
           <div class="footer__logo">
-            <div class="logo"><span class="sr-only">Rein Fach logo</span><img src="img/logo-wide-light.webp" alt="" width="200"></div>
+            <div class="logo"><span class="sr-only">ReinFach logo</span><img src="img/logo-wide-light.webp" alt="ReinFach" width="200" height="80"></div>
           </div>
           <div class="footer__info">
             <div>ReinFach – Inh. Yurii Kovalskyi<br></div>
