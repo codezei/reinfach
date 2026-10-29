@@ -14,6 +14,40 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <meta name="theme-color" content="#2874DF">
   <link rel="stylesheet" href="css/main.min.css?ver=1.0.1">
+  <style>
+    /* unbounded-700 - latin-ext */
+    @font-face {
+      font-display: swap;
+      /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'Unbounded';
+      font-style: normal;
+      font-weight: 700;
+      src: url('./fonts/unbounded-v12-latin-ext-700.woff2') format('woff2');
+      /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* manrope-regular - latin-ext */
+    @font-face {
+      font-display: swap;
+      /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 400;
+      src: url('./fonts/manrope-v20-latin-ext-regular.woff2') format('woff2');
+      /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* manrope-700 - latin-ext */
+    @font-face {
+      font-display: swap;
+      /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 700;
+      src: url('./fonts/manrope-v20-latin-ext-700.woff2') format('woff2');
+      /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+  </style>
   <meta name="description" content="Professionelle Polster-, Matratzen- &amp; Auto-Innenreinigung in Würzburg und Umgebung. ✓ 0 € Anfahrt in Würzburg ✓ Faire Festpreise ✓ 5,0 ★ bei Google. Jetzt Foto per WhatsApp senden!">
   <meta name="keywords" content="Polsterreinigung Würzburg, Sofareinigung Würzburg, Matratzenreinigung Würzburg, Auto Innenreinigung Würzburg, Teppichreinigung vor Ort, Polstermöbel reinigen lassen, Fleckenentfernung Sofa, Milbenentfernung Matratze, Autositze reinigen Würzburg, ReinFach">
   <meta name="robots" content="index, follow">
@@ -27,15 +61,13 @@
   <meta name="twitter:description" content="Professionelle Polster-, Matratzen- &amp; Auto-Innenreinigung in Würzburg und Umgebung. ✓ 0 € Anfahrt in Würzburg ✓ Faire Festpreise ✓ 5,0 ★ bei Google. Jetzt Foto per WhatsApp senden!">
   <meta name="twitter:image" content="https://reinfach.de/img/og-image.jpg">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context">
+  <link rel="preload" href="/build/fonts/manrope-v20-latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/build/fonts/unbounded-v12-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="./img/process/sofa-after.webp">
+  <link rel="preload" as="image" href="./img/process/sofa-before.webp">
 </head>
 
-<body id="body"><svg class="hidden-blob-svg" width="0" height="0">
-    <defs>
-      <clipPath id="blob-mask" clipPathUnits="objectBoundingBox">
-        <path id="blob-path" d="M0.5,0.075 C0.75,0.05 0.925,0.225 0.925,0.5 C0.925,0.725 0.775,0.925 0.5,0.95 C0.225,0.975 0.05,0.75 0.075,0.5 C0.1,0.25 0.225,0.1 0.5,0.075 Z"></path>
-      </clipPath>
-    </defs>
-  </svg>
+<body id="body">
   <div class="cursor-glow"></div>
   <header class="header section section-white">
     <div class="header__inner">
@@ -1116,8 +1148,8 @@
       <p class="text-center text-small">© 2026 ReinFach. Alle Rechte vorbehalten.</p>
     </div>
   </footer>
-  <script src="js/gsap.min.js"></script>
-  <script src="js/main.js?ver=1.0.1"></script>
+  <script src="js/gsap.min.js" defer></script>
+  <script src="js/main.js?ver=1.0.1" defer></script>
   <script src="js/swiper-bundle.min.js" async></script>
 </body>
 

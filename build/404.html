@@ -14,6 +14,40 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <meta name="theme-color" content="#2874DF">
   <link rel="stylesheet" href="css/main.min.css?ver=1.0.1">
+  <style>
+    /* unbounded-700 - latin-ext */
+    @font-face {
+      font-display: swap;
+      /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'Unbounded';
+      font-style: normal;
+      font-weight: 700;
+      src: url('./fonts/unbounded-v12-latin-ext-700.woff2') format('woff2');
+      /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* manrope-regular - latin-ext */
+    @font-face {
+      font-display: swap;
+      /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 400;
+      src: url('./fonts/manrope-v20-latin-ext-regular.woff2') format('woff2');
+      /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* manrope-700 - latin-ext */
+    @font-face {
+      font-display: swap;
+      /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 700;
+      src: url('./fonts/manrope-v20-latin-ext-700.woff2') format('woff2');
+      /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+  </style>
   <meta name="description" content="Сторінку не знайдено. Поверніться на головну сторінку yevdev.">
   <meta name="keywords">
   <meta name="robots" content="index, follow">
@@ -27,6 +61,10 @@
   <meta name="twitter:description" content="Сторінку не знайдено. Поверніться на головну сторінку yevdev.">
   <meta name="twitter:image" content="https://yevdev.dev/img/preview.webp">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context">
+  <link rel="preload" href="/build/fonts/manrope-v20-latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/build/fonts/unbounded-v12-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="./img/process/sofa-after.webp">
+  <link rel="preload" as="image" href="./img/process/sofa-before.webp">
   <meta name="robots" content="noindex, follow">
 </head>
 

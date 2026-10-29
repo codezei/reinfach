@@ -19,23 +19,15 @@ prepend head
 
 
 append head
-    //- include ../data/portfolioData
     include ../data/faqData
     include ../data/videoData
     include ../data/reviewData
-    //- include ../data/reasonData
-    //- include ../data/explanationData
     include ../data/howData
     include ../data/priceData
 
 
 append content
-    svg.hidden-blob-svg(width="0" height="0")
-        defs
-            clipPath#blob-mask(clipPathUnits="objectBoundingBox")
-                path#blob-path(d="M0.5,0.075 C0.75,0.05 0.925,0.225 0.925,0.5 C0.925,0.725 0.775,0.925 0.5,0.95 C0.225,0.975 0.05,0.75 0.075,0.5 C0.1,0.25 0.225,0.1 0.5,0.075 Z")
     .cursor-glow
-    //- include ../mixins/portfolioItem
     include ../mixins/ba-slider
     include ../mixins/faqItem
     include ../mixins/videoItem
@@ -51,24 +43,12 @@ append content
         include ../components/how
         include ../components/works
         include ../components/reviews
-        //- include ../components/advantages
-        //- include ../components/explanation
-        //- include ../components/reason
-        //- include ../components/format
-        //- include ../components/portfolio
-        //- include ../components/how
         include ../components/faq
         include ../components/locations
         include ../components/contacts
         include ../components/icons
-        //- include ../components/privacy
     include ../components/footer
 append scripts
-
-    //- script(src="js/fancybox.js", async)
-    //- script(src="js/vanilla-tilt.min.js", async)
-    script(src="js/gsap.min.js")
-    //- script(src="js/scroll-trigger.min.js")
-    //- script(src="js/beer-slider.js")
-    script(src="js/main.js?ver=1.0.1")
+    script(src="js/gsap.min.js", defer)
+    script(src="js/main.js?ver=1.0.1",  defer)
     script(src="js/swiper-bundle.min.js", async)
