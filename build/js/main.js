@@ -266,58 +266,6 @@
       }
     }
 
-    function reviews () {
-      var reviewsSwiper = new Swiper('.reviews-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        pagination: {
-          el: '.reviews-pagination',
-          clickable: true
-        },
-        navigation: {
-          nextEl: ".reviews-navigation-button-next",
-          prevEl: ".reviews-navigation-button-prev"
-        },
-        breakpoints: {
-          // 576: {
-          //     slidesPerView: 1.5,
-          // },
-          768: {
-            slidesPerView: 2
-          },
-          992: {
-            slidesPerView: 3
-          }
-        }
-      });
-    }
-
-    function works () {
-      var worksSwiper = new Swiper('.works-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        pagination: {
-          el: '.works-pagination',
-          clickable: true
-        },
-        navigation: {
-          nextEl: ".works-navigation-button-next",
-          prevEl: ".works-navigation-button-prev"
-        },
-        breakpoints: {
-          576: {
-            slidesPerView: 2
-          },
-          // 768: {
-          //     slidesPerView: 2,
-          // },
-          992: {
-            slidesPerView: 3
-          }
-        }
-      });
-    }
-
     function video () {
       var videoCards = document.querySelectorAll('.js-video');
       videoCards.forEach(function (card) {
@@ -417,36 +365,6 @@
       });
     }
 
-    function services () {
-      var servicesSwiper = new Swiper('.services-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        autoHeight: true,
-        pagination: {
-          el: '.services-pagination',
-          clickable: true
-        },
-        navigation: {
-          nextEl: ".services-navigation-button-next",
-          prevEl: ".services-navigation-button-prev"
-        },
-        breakpoints: {
-          576: {
-            slidesPerView: 1.25
-          },
-          768: {
-            slidesPerView: 1.5
-          },
-          992: {
-            slidesPerView: 2
-          },
-          1200: {
-            slidesPerView: 2.5
-          }
-        }
-      });
-    }
-
     document.addEventListener('DOMContentLoaded', function () {
       ScrollTrigger.config({
         ignoreMobileResize: true
@@ -455,9 +373,6 @@
       baSlider();
       cursor();
       magnet();
-      services();
-      reviews();
-      works();
       video();
       toggler();
       tabs(); // let categoriesNavigation = [
